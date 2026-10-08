@@ -4,12 +4,30 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>김소정 포트폴리오</title>
-<meta name="description" content="분리된 시스템과 데이터를 분석해 하나의 흐름으로 연결하는 개발자 김소정의 포트폴리오 — 통합 메신저, STM32, PLC/HMI">
+<meta name="description" content="분리된 시스템과 데이터를 분석해 하나의 흐름으로 연결하는 개발자 김소정의 포트폴리오 — 통합 메신저, STM32, PLC/HMI, 다중 로봇 FMS">
 <meta property="og:title" content="김소정 포트폴리오">
-<meta property="og:description" content="통합 메신저 시스템 구축 · STM32 IMU 기반 LCD 상태 전환 · PLC/HMI 소재 가공·적재 설비 제어">
+<meta property="og:description" content="통합 메신저 시스템 구축 · STM32 IMU 기반 LCD 상태 전환 · PLC/HMI 소재 가공·적재 설비 제어 · 다중 로봇 FMS 경로·예약 제어">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%230B3B30'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'>K</text></svg>">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="assets/style.css">
+<style>
+/* Ongoing FMS project */
+#profile .cover-main { gap:10px; padding-top:24px; padding-bottom:18px; }
+#profile .cover-main .label { margin-bottom:5px; }
+#profile .skills { row-gap:3px; }
+#profile .proj-card { gap:4px; padding:11px 12px 10px; }
+.ongoing-project { display:flex; flex-wrap:wrap; align-items:center; gap:4px 10px; margin-top:6px; padding:5px 10px; border:1px solid #CBE6DB; border-radius:7px; background:var(--teal-soft); font-size:11px; text-decoration:none; }
+.ongoing-project b { color:var(--teal); }
+.ongoing-project .page-ref { margin-left:auto; color:var(--ink-3); font-size:10px; }
+.f1 { grid-template-columns:1fr 1fr; gap:24px; }
+.fms-points { display:grid; gap:10px; }
+.fms-points .box { padding:12px 14px; }
+.fms-points p { font-size:12px; color:var(--ink-2); line-height:1.65; }
+.fms-status { display:grid; grid-template-columns:70px 1fr; gap:8px 10px; font-size:12px; }
+.fms-status dt { color:var(--teal); font-weight:800; }
+.fms-status dd { margin:0; color:var(--ink-2); }
+@media screen { body.flow .f1 { grid-template-columns:minmax(0,1fr); } }
+</style>
 </head>
 <body>
 
@@ -21,6 +39,7 @@
       <a href="#messenger">01 통합 메신저</a>
       <a href="#stm32">02 STM32</a>
       <a href="#plc">03 PLC · HMI</a>
+      <a href="#fms">04 FMS · 진행 중</a>
     </nav>
     <button class="btn-print" type="button" onclick="window.print()">PDF 저장</button>
   </div>
@@ -114,9 +133,10 @@
           <div class="chips"><span class="chip">MELSEC-Q</span><span class="chip">Ladder</span><span class="chip">GOT HMI</span></div>
         </a>
       </div>
+      <a class="ongoing-project" href="#fms"><b>04 · 진행 중</b><span>다중 로봇 FMS — A* 경로 계산·예약 제어</span><span class="page-ref">교육 프로젝트 · p.8 →</span></a>
     </div>
 
-    <div class="sh-foot" style="margin-top:0"><span>김소정 · Portfolio</span><span class="pg">01 / 07</span></div>
+    <div class="sh-foot" style="margin-top:0"><span>김소정 · Portfolio</span><span class="pg">01 / 08</span></div>
   </div>
 </section>
 
@@ -188,7 +208,7 @@
     </div>
   </div>
 
-  <footer class="sh-foot"><span>김소정 · Portfolio — 01 통합 메신저 시스템 구축</span><span class="pg">02 / 07</span></footer>
+  <footer class="sh-foot"><span>김소정 · Portfolio — 01 통합 메신저 시스템 구축</span><span class="pg">02 / 08</span></footer>
 </section>
 
 <!-- ============================================================
@@ -268,7 +288,7 @@
     </div>
   </div>
 
-  <footer class="sh-foot"><span>※ 회사 내부 자료·화면·소스·조직정보를 사용하지 않고 포트폴리오용으로 재구성했습니다.</span><span class="pg">03 / 07</span></footer>
+  <footer class="sh-foot"><span>※ 회사 내부 자료·화면·소스·조직정보를 사용하지 않고 포트폴리오용으로 재구성했습니다.</span><span class="pg">03 / 08</span></footer>
 </section>
 
 <!-- ============================================================
@@ -367,7 +387,7 @@
     </div>
   </div>
 
-  <footer class="sh-foot"><span>김소정 · Portfolio — 02 STM32 RC카</span><span class="pg">04 / 07</span></footer>
+  <footer class="sh-foot"><span>김소정 · Portfolio — 02 STM32 RC카</span><span class="pg">04 / 08</span></footer>
 </section>
 
 <!-- ============================================================
@@ -456,7 +476,7 @@
     </div>
   </div>
 
-  <footer class="sh-foot"><span>김소정 · Portfolio — 02 STM32 RC카</span><span class="pg">05 / 07</span></footer>
+  <footer class="sh-foot"><span>김소정 · Portfolio — 02 STM32 RC카</span><span class="pg">05 / 08</span></footer>
 </section>
 
 <!-- ============================================================
@@ -552,7 +572,7 @@
     </div>
   </div>
 
-  <footer class="sh-foot"><span>김소정 · Portfolio — 03 AutoStore PLC · HMI</span><span class="pg">06 / 07</span></footer>
+  <footer class="sh-foot"><span>김소정 · Portfolio — 03 AutoStore PLC · HMI</span><span class="pg">06 / 08</span></footer>
 </section>
 
 <!-- ============================================================
@@ -621,14 +641,84 @@
       </div>
 
       <div class="retro" style="margin-top:auto">
-        <div class="label">세 프로젝트를 관통하는 관점</div>
+        <div class="label">프로젝트를 관통하는 관점</div>
         <b>메신저</b> 사용자·조직 데이터의 흐름 · <b>STM32</b> 센서값이 화면 상태가 되는 흐름 · <b>PLC</b> HMI 입력이 설비 동작과 상태로 돌아오는 흐름.<br>
         시스템 사이의 <b>데이터와 상태를 정확히 연결하는 개발자</b>로 기여하겠습니다.
       </div>
     </div>
   </div>
 
-  <footer class="sh-foot"><span>김소정 · Portfolio — 03 AutoStore PLC · HMI</span><span class="pg">07 / 07</span></footer>
+  <footer class="sh-foot"><span>김소정 · Portfolio — 03 AutoStore PLC · HMI</span><span class="pg">07 / 08</span></footer>
+</section>
+
+
+<!-- ============================================================
+     04  FMS — ONGOING EDUCATIONAL PROJECT
+     ============================================================ -->
+<section class="sheet" id="fms">
+  <header class="sh-head">
+    <div>
+      <div class="kicker">Project 04 · 교육 과정 팀 프로젝트<em>진행 중</em></div>
+      <h2>다중 로봇 FMS — 경로 계산·예약 제어</h2>
+      <p class="sub">A*로 이동 경로를 계산하고, <b>점유·예약 상태에 따라 주행을 제어</b></p>
+    </div>
+    <dl class="meta">
+      <dt>Project</dt><dd>E1I6 물류센터 다중 로봇 시스템 · 7인</dd>
+      <dt>Role</dt><dd>A* 경로 계산 · 자원 예약 · 테스트 케이스</dd>
+      <dt>Status</dt><dd>진행 중 · 2026.10 기준</dd>
+    </dl>
+  </header>
+
+  <div class="sh-body f1">
+    <div class="col">
+      <div>
+        <div class="label teal">프로젝트 개요</div>
+        <p class="lead">현재 수강 중인 <b>[KDT] AI융합 로봇 SW개발자 과정</b>의 팀 프로젝트입니다. 물류 주문에 따라 여러 이동 로봇과 로봇팔이 작업하고, 웹에서 위치와 상태를 확인하는 <b>FMS(다중 로봇 관제 시스템)</b>를 개발하고 있습니다.</p>
+      </div>
+      <div class="box sand">
+        <div class="label">설계에서 고려한 문제</div>
+        <p class="lead">각 로봇의 경로만 계산하면 다른 로봇이 사용하는 구간에 동시에 진입할 수 있습니다. <b>이동 경로와 자원 예약을 연결</b>하고, 현재 점유 상태를 기준으로 진입 여부를 판단해야 합니다.</p>
+      </div>
+      <div>
+        <div class="label teal">담당 로직의 처리 흐름</div>
+        <div class="hflow">
+          <div class="node"><b>목표 입력</b>현재 위치 · 목적지</div><div class="ar">→</div>
+          <div class="node hl"><b>A* 경로 계산</b>이동 경로 탐색</div><div class="ar">→</div>
+          <div class="node hl"><b>자원 예약</b>경로 · 점유 판정</div><div class="ar">→</div>
+          <div class="node hl"><b>주행 허가</b>진입 여부 판단</div>
+        </div>
+        <p class="note" style="margin-top:7px">담당 기능을 설명하기 위한 개념 흐름도</p>
+      </div>
+      <div class="box">
+        <div class="label">문제 분석 및 수정</div>
+        <h4>경로를 다시 설정해도 이전 경로가 남는 현상</h4>
+        <p class="small">코드 병합 과정에서 초기화 코드가 누락된 것을 확인하고 수정했습니다. 경로 계산 결과뿐 아니라, 재설정 시 기존 상태가 정리되는 흐름도 함께 점검했습니다.</p>
+      </div>
+      <div class="chips"><span class="chip teal">A*</span><span class="chip">자원 예약</span><span class="chip">상태 기반 제어</span><span class="chip">ROS2 연계 프로젝트</span></div>
+    </div>
+
+    <div class="col">
+      <div>
+        <div class="label rust">본인 기여</div>
+        <div class="fms-points">
+          <div class="box"><h4><span class="num">01</span> A* 기반 경로 계산·예약 처리 구현</h4><p>A* 알고리즘으로 이동 경로를 계산하고, 현재 위치를 기준으로 경로와 점유를 판정하도록 자원 예약 테이블을 구성했습니다. 시뮬레이션에 시간대별 경로 예약과 진입 제어를 적용했습니다.</p></div>
+          <div class="box"><h4><span class="num">02</span> 주행 허가 로직을 독립 서비스로 분리</h4><p>실제 점유 상태를 판단하는 부분을 시뮬레이션 코드에서 분리했습니다. 실물 로봇 연동 시에도 점유 상태를 기준으로 주행 허가를 판단할 수 있도록 구조를 정리했습니다.</p></div>
+          <div class="box"><h4><span class="num">03</span> 테스트 케이스 적용</h4><p>경로 계산과 예약 처리에 테스트 케이스를 적용해 동작을 확인하고 있습니다. 입력 데이터에 따른 처리 결과를 점검하며 예외 상황을 보완하고 있습니다.</p></div>
+        </div>
+      </div>
+      <div class="box teal">
+        <div class="label teal">현재 진행 범위</div>
+        <dl class="fms-status">
+          <dt>구현</dt><dd>A* 경로 계산·예약 처리, 주행 허가 로직 분리</dd>
+          <dt>검증</dt><dd>테스트 케이스 적용 및 예외 상황 점검 진행</dd>
+          <dt>팀 통합</dt><dd>실물 로봇 연동 과정에서 점유·예약 해제와 주행 흐름을 검토 중</dd>
+        </dl>
+        <p class="note" style="margin-top:8px">다중 로봇의 실물 통합 검증은 진행 중이며, 검증 결과에 따라 보완하고 있습니다.</p>
+      </div>
+      <div class="retro" style="margin-top:auto"><b>경로를 계산하는 것에서 나아가, 현재 상태에 따라 실제로 이동해도 되는지를 판단하는 제어 흐름을 다루고 있습니다.</b></div>
+    </div>
+  </div>
+  <footer class="sh-foot"><span>김소정 · Portfolio — 04 다중 로봇 FMS · 교육 프로젝트 진행 중</span><span class="pg">08 / 08</span></footer>
 </section>
 
 </main>
