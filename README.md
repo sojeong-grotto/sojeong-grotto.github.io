@@ -1,18 +1,19 @@
 # 김소정 · 로봇 SW 포트폴리오
 
-웹 버전(GitHub Pages)과 A4 PDF를 같은 `index.html` 하나로 만듭니다.
+https://sojeong-grotto.github.io
 
-- 웹: 화면 폭이 820px 이하이면 한 단 레이아웃으로 바뀝니다 (모바일).
-- PDF: `./build.sh`를 실행하면 Chrome headless로 `김소정_로봇SW_포트폴리오.pdf`(A4 13장)를 만듭니다.
-- 점검: `./build.sh check`는 각 페이지의 내용 높이를 출력하고, 넘친 페이지에 `OVER`를 표시합니다.
+| 파일 | 역할 |
+|---|---|
+| `web.src.html` + `web.css` | 웹 포트폴리오 원본 (상단 메뉴, 섹션 스크롤, 모바일 반응형) |
+| `index.html` | 생성 파일. `web.src.html`에 `print.html`의 SVG 다이어그램을 넣어 만듦 — 직접 수정하지 않음 |
+| `print.html` + `style.css` | A4 13장 인쇄용 원본, PDF 생성에 사용 |
+| `김소정_로봇SW_포트폴리오.pdf` | 생성 파일 |
 
-## GitHub Pages 배포
+- `./build.sh` : `index.html`과 PDF를 함께 생성합니다 (Python 3, Google Chrome 필요).
+- `./build.sh check` : PDF 각 페이지의 내용 높이를 출력하고, 넘친 페이지에 `OVER`를 표시합니다.
+- 다이어그램은 `print.html`에서만 고치면 웹과 PDF에 함께 반영됩니다.
 
-1. GitHub에 `<아이디>.github.io` 저장소를 만듭니다.
-2. 이 `site/` 폴더의 내용(`index.html`, `style.css`, `assets/`, `fonts/`, PDF)을 저장소 루트에 올립니다.
-3. Settings → Pages에서 `main` 브랜치 루트를 배포 대상으로 고릅니다.
-
-## 구성
+## PDF 구성
 
 | 쪽 | 내용 |
 |---|---|

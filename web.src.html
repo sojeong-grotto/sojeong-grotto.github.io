@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>김소정 포트폴리오</title>
+<meta name="description" content="김소정 | 로봇 SW 개발자 (다중 로봇 관제·장비 연동). C++ 실무 9년, ROS 2 다중 로봇 FMS 경로 예약·교착 해소.">
+<meta name="author" content="김소정">
+<meta property="og:title" content="김소정 · 로봇 SW 포트폴리오">
+<meta property="og:description" content="C++ 실무 9년 · 다중 로봇 FMS 경로 예약·교착 해소 · STM32 · PLC">
+<meta property="og:image" content="https://sojeong-grotto.github.io/assets/fms_ui.jpg">
+<meta name="theme-color" content="#15181d">
+<link rel="stylesheet" href="web.css">
+<!-- 이 파일은 web.src.html에서 생성됩니다. 수정은 web.src.html에서 하고 ./build.sh를 실행하세요. -->
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">김소정<span>Robot SW Engineer</span></a>
+    <nav class="menu" aria-label="섹션">
+      <a href="#about">소개</a>
+      <a href="#skills">역량</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#contact">연락처</a>
+    </nav>
+    <a class="btn solid" href="김소정_로봇SW_포트폴리오.pdf" download>
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 2v8m0 0L4.5 6.5M8 10l3.5-3.5M2.5 13.5h11"/></svg>PDF</a>
+  </div>
+</header>
+
+<main id="main">
+<!-- =============================== HERO =============================== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <div class="role">로봇 SW 개발자 · 다중 로봇 관제(FMS) · 장비 연동</div>
+        <h1>김소정<small>KIM SOJEONG</small></h1>
+        <p class="headline" style="color:#fff">9년간 C++로 시스템을 연결해 온 경험으로,<br>여러 로봇이 서로 막히지 않고 움직이도록 경로를 조율합니다.</p>
+      </div>
+      <div class="photo"><img src="assets/photo.jpg" alt="김소정 증명사진" width="150" height="194"></div>
+    </div>
+    <div class="cta">
+      <a class="btn solid" href="#p1">대표 프로젝트 보기</a>
+      <a class="btn ghost" href="https://github.com/sojeong-grotto">GitHub</a>
+      <a class="btn ghost" href="mailto:ksj9164@gmail.com">ksj9164@gmail.com</a>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="n">9<span>년 11개월</span></div><div class="t">C++/MFC 상용 SW 개발·운영</div><div class="d">그룹사 통합 메신저 구조·DB 설계, Teams 연동, WinDbg 장애 분석</div></div>
+      <div class="kpi"><div class="n">8<span>종</span></div><div class="t">다중 로봇 교통 시나리오 구축</div><div class="d">병목·마주 오는 주행·3대 순환 대기를 시간 예약과 양보로 해소하고 웹·CLI로 검증</div></div>
+      <div class="kpi"><div class="n">20<span>+ 곳</span></div><div class="t">고객사별 통신·연동 요구 대응</div><div class="d">HTTPS 통신, XML→JSON 변환, 보안 SDK 연동을 고객사마다 맞춰 구현</div></div>
+    </div>
+
+    <div class="kw" aria-label="직무 키워드">
+      <span class="hot">ROS 2 · Nav2</span><span class="hot">Space-Time A*</span><span class="hot">경로 예약 · 교착 해소</span><span class="hot">FastAPI · WebSocket</span>
+      <span>Zenoh · MQTT</span><span>C++ / MFC</span><span>REST API 연동</span><span>DB 설계 · 마이그레이션</span><span>WinDbg</span>
+      <span>STM32 HAL (I2C · SPI)</span><span>MELSEC-Q PLC · GOT HMI</span><span>Python · Linux</span>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== ABOUT =============================== -->
+<section class="sec" id="about">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><b>01</b>About</div>
+      <h2 class="title">화면 안의 소프트웨어에서,<br><em>장비를 움직이는 소프트웨어</em>로</h2>
+      <p class="lead">9년 동안 C++/MFC로 업무 시스템과 사용자를 연결하는 클라이언트를 만들었습니다. 여러 시스템 사이의 데이터 흐름을 파악하고 문제의 근본 원인을 찾는 일에 가장 몰입했지만, 그 결과는 늘 화면 위에서 끝났습니다. 같은 방식으로 실제 장비를 움직이고 싶어 PLC, STM32, ROS 2를 차례로 익혔고, 지금은 다중 로봇 관제 시스템에서 경로 탐색과 교통 제어를 맡고 있습니다.</p>
+    </div>
+
+    <div class="g3 values">
+      <div class="box"><span class="num">1</span><h4>원인부터 찾습니다</h4><p>증상을 바로 고치기보다 재현 조건과 실행 흐름을 먼저 확인합니다. 개발 환경에서 재현되지 않던 비정상 종료를 크래시 덤프로 추적해 해결했습니다.</p></div>
+      <div class="box"><span class="num">2</span><h4>시스템 사이를 잇습니다</h4><p>분리 운영되던 메신저 여러 개를 하나의 구조와 DB로 통합했고, Teams·보안 SDK 같은 외부 시스템을 기존 제품에 맞게 연결했습니다.</p></div>
+      <div class="box"><span class="num">3</span><h4>기준을 세워 합의합니다</h4><p>배차 시 경로 계산을 Nav 파트와 FMS 파트 중 어느 쪽이 맡을지 의견이 갈렸을 때, 현업 시스템의 역할 분담 사례로 판단 기준을 만들어 합의했습니다.</p></div>
+    </div>
+
+    <div class="g2" style="margin-top:64px;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);align-items:start">
+      <div>
+        <div class="blocktitle">경력 · 교육</div>
+        <div class="tl">
+          <div class="item now"><div class="when">2026.04 – 2026.11</div><div class="what"><h4>대한상공회의소 서울기술교육센터 <span class="tag edu">교육</span></h4><p>AI융합 로봇 SW 개발자 과정 3기 · C/C++, Python, Linux · PLC(MELSEC-Q, GOT HMI, Servo) · STM32 HAL · ROS 2 다중 로봇 물류 프로젝트 진행 중</p></div></div>
+          <div class="item"><div class="when">2017.08 – 2024.08<small>7년 1개월</small></div><div class="what"><h4>큐텐테크놀로지 · 선임연구원 <span class="tag work">실무</span></h4><p>사내 메신저 Qpost 클라이언트(MFC) 개발·운영 · 그룹사 통합 메신저 구조·DB 설계와 데이터 마이그레이션 · Microsoft Teams 채팅 연동 · 보안 관리 프로그램 SecurityManager 개발</p></div></div>
+          <div class="item"><div class="when">2014.11 – 2016.09<small>1년 11개월</small></div><div class="what"><h4>소프트보울 · 사원 <span class="tag work">실무</span></h4><p>XML/XForms 웹 UI 개발 도구 TrustForm(MFC) 유지보수 · 신한카드, 국립중앙의료원 등 20여 개 고객사 전담 · HTTPS, XML→JSON, 키보드 보안 모듈 연동</p></div></div>
+          <div class="item"><div class="when">2013.12 – 2014.10<small>11개월</small></div><div class="what"><h4>콤텍정보통신 · 앱 개발 <span class="tag work">실무</span></h4><p>한국공항공사 항공종합통신망(ATN) 데이터베이스 시스템 · Java Swing 검색·관리 터미널, Oracle CRUD</p></div></div>
+          <div class="item"><div class="when">2010.02 – 2014.02</div><div class="what"><h4>호서대학교 정보통신공학과 졸업</h4><p>학점 3.72 / 4.5 · 전공 동아리 DOIT(C/C++·AVR) · C언어 튜터링</p></div></div>
+        </div>
+      </div>
+      <div class="box hot target" style="margin-top:34px">
+        <span class="label">지원 분야</span><span style="font-weight:700">로봇 관제·FMS 개발<br>장비 운영 SW<br>설비·로봇 연동 SW</span>
+        <span class="label">바로 기여</span><span class="small">C++ 기반 운영 프로그램 개발, 외부 시스템 연동, DB 구조 설계와 데이터 이전, 사용자 환경 장애 분석</span>
+        <span class="label">넓혀 가는 중</span><span class="small">ROS 2·Nav2 기반 다중 로봇 경로·예약 제어, 센서·설비 상태와 화면의 동기화</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== SKILLS =============================== -->
+<section class="sec tint" id="skills">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><b>02</b>Core Competencies</div>
+      <h2 class="title">실무 9년과 교육 프로젝트에서 확인한<br><em>네 가지 역량</em></h2>
+    </div>
+    <div class="g4 comp">
+      <div class="box"><span class="k">01</span><h3>다중 로봇 경로·교통 제어</h3><p class="one">여러 로봇이 같은 노드와 통로를 쓸 때 경로뿐 아니라 사용 시간까지 계획합니다.</p>
+        <ul class="dots"><li>Space-Time A*로 대기와 우회를 비교</li><li>노드·통로별 시간 예약표로 충돌 사전 차단</li><li>순환 대기 탐지와 측면 노드 양보</li></ul>
+        <div class="proof">근거 · <a href="#p1">P1 다중 로봇 FMS</a></div></div>
+      <div class="box"><span class="k">02</span><h3>시스템 연동·데이터 흐름 설계</h3><p class="one">데이터가 어디서 생기고 어떤 경로로 화면과 장비에 닿는지부터 정리합니다.</p>
+        <ul class="dots"><li>분리된 메신저를 통합 구조·DB로 재설계</li><li>Graph REST API 메시지 동기화</li><li>FMS 정책 로직을 독립 서비스로 분리</li></ul>
+        <div class="proof">근거 · <a href="#p4">P4 통합 메신저</a> · <a href="#p1">P1</a></div></div>
+      <div class="box"><span class="k">03</span><h3>장비 제어·임베디드 구현</h3><p class="one">센서 입력과 설비 동작을 화면 상태와 같은 시점으로 맞춥니다.</p>
+        <ul class="dots"><li>STM32 HAL로 I2C 센서·SPI LCD 연동</li><li>PLC 래더로 적재·비움 수동 시퀀스</li><li>GOT HMI 4개 화면과 PLC 디바이스 연결</li></ul>
+        <div class="proof">근거 · <a href="#p2">P2 STM32</a> · <a href="#p3">P3 PLC</a></div></div>
+      <div class="box"><span class="k">04</span><h3>장애 분석·안정화</h3><p class="one">재현되지 않는 문제도 조건을 좁혀 가며 원인을 확인하고 재발을 막습니다.</p>
+        <ul class="dots"><li>WinDbg 덤프·호출 스택 분석</li><li>소프트웨어 → 전압 → 배선 순 원인 축소</li><li>교통 시나리오 8종 회귀 확인</li></ul>
+        <div class="proof">근거 · <a href="#p4">P4</a> · <a href="#p2">P2</a> · <a href="#p1">P1</a></div></div>
+    </div>
+
+    <div style="margin-top:64px">
+      <div class="blocktitle">기술 스택</div>
+      <div class="stack">
+        <div><span class="k2">Language</span><span class="v"><b>C++ (실무 9년)</b> · C · Python · Java · C#</span></div>
+        <div><span class="k2">Robot</span><span class="v">ROS 2 (Jazzy) · Nav2 · TurtleBot3 · Zenoh · MQTT · A* / Space-Time A*</span></div>
+        <div><span class="k2">Backend · Web</span><span class="v">FastAPI · WebSocket · REST API (Microsoft Graph) · React 화면 연동</span></div>
+        <div><span class="k2">Embedded · FA</span><span class="v">STM32F411 HAL (I2C · SPI · UART · TIM) · MELSEC-Q (GX Works2, Ladder) · GOT HMI · Servo</span></div>
+        <div><span class="k2">Desktop · DB</span><span class="v"><b>MFC</b> · SQLite · MySQL · Oracle · WinInet</span></div>
+        <div><span class="k2">Tools</span><span class="v">Git / GitHub · Jira · Confluence · WinDbg · Linux (Ubuntu) · pytest</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================== PROJECTS =============================== -->
+<section class="sec" id="projects">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow"><b>03</b>Projects</div>
+      <h2 class="title">교육 프로젝트 3건과 <em>실무 프로젝트</em> 1건</h2>
+      <p class="lead">프로젝트마다 맡은 범위만 적고 팀 전체의 결과와 구분했습니다. 수치는 코드, 커밋, 발표 자료에서 확인한 값만 사용했습니다.</p>
+    </div>
+
+    <div class="pcards">
+      <a class="pcard" href="#p1"><div class="thumb"><img src="assets/fms_ui.jpg" alt="" style="object-position:left top" loading="lazy"></div>
+        <div class="body"><div class="pg"><span>P1 · 2026.09 –</span><span class="tag live">진행 중</span></div><h3>다중 로봇 물류 FMS</h3><p>경로 탐색, 노드·통로 시간 예약, 교착 해소, 주행 허가 분리</p><span class="go">자세히 →</span></div></a>
+      <a class="pcard" href="#p2"><div class="thumb"><img src="assets/rc_car.jpg" alt="" style="object-position:center 55%" loading="lazy"></div>
+        <div class="body"><div class="pg"><span>P2 · 2026.07 – 08</span><span class="tag edu">4인</span></div><h3>STM32 무선 RC카</h3><p>가속도 센서(I2C)와 TFT LCD(SPI) 연동, 표시 안정화</p><span class="go">자세히 →</span></div></a>
+      <a class="pcard" href="#p3"><div class="thumb"><img src="assets/plc_rig.jpg" alt="" loading="lazy"></div>
+        <div class="body"><div class="pg"><span>P3 · 2026.06</span><span class="tag edu">2인</span></div><h3>AutoStore PLC</h3><p>수동 시퀀스, HMI 화면 구성, PLC·HMI 상태 동기화</p><span class="go">자세히 →</span></div></a>
+      <a class="pcard" href="#p4"><div class="thumb" style="background:var(--night);display:flex;flex-direction:column;justify-content:center;padding:20px;gap:8px">
+          <span style="color:#ff9a6b;font-weight:800;font-size:13px;letter-spacing:.1em">C++ · MFC · SQLITE</span>
+          <span style="color:#fff;font-weight:800;font-size:22px;line-height:1.25">Messenger A · B · C<br>→ Qpost</span></div>
+        <div class="body"><div class="pg"><span>P4 · 2017 – 2024</span><span class="tag work">실무</span></div><h3>그룹사 통합 메신저</h3><p>통합 구조·DB 설계, 마이그레이션, Teams 연동, 크래시 분석</p><span class="go">자세히 →</span></div></a>
+    </div>
+
+    <!-- ---------- P1 ---------- -->
+    <article class="project" id="p1" style="margin-top:clamp(72px,10vw,112px)">
+      <aside class="aside">
+        <span class="pno">P1</span> <span class="tag live">진행 중</span>
+        <h3>다중 로봇 물류 자동화 FMS</h3>
+        <p class="sub">AMR 3대와 로봇팔 4대를 주문 단위로 운영하는 관제 시스템</p>
+        <div class="meta">
+          <div><span class="label">기간</span><span>2026.09 – 진행 중</span></div>
+          <div><span class="label">인원</span><span>7인 (FMS · AMR · OMX)</span></div>
+          <div><span class="label">역할</span><span>FMS 경로 탐색 · 시간 예약 · 교통 제어</span></div>
+        </div>
+        <div class="chips"><span class="chip hot">Python</span><span class="chip hot">FastAPI</span><span class="chip">ROS 2 Jazzy</span><span class="chip">Nav2</span><span class="chip">Zenoh</span><span class="chip">MQTT</span><span class="chip">WebSocket</span><span class="chip">React</span><span class="chip">pytest</span></div>
+        <div class="links"><a href="https://github.com/E1I6-Logistics/Logistics_FMS">팀 저장소 →</a></div>
+      </aside>
+      <div class="content">
+        <p class="intro">주문이 들어오면 AMR을 배차하고, 피킹 스테이션에서 로봇팔이 물품을 싣고, 패킹 스테이션까지 운반하는 흐름을 관제합니다. 저는 FMS 파트에서 <b>여러 AMR이 서로 막히지 않도록 경로와 통행 시간을 조율하는 부분</b>을 맡았습니다.</p>
+        <figure>
+          <a class="shot" href="assets/fms_ui.jpg" target="_blank" rel="noopener"><img src="assets/fms_ui.jpg" alt="FMS 웹 관제 화면: 노드 그래프 지도 위 로봇 3대와 주문 입력, 시나리오 실행 UI" loading="lazy"></a>
+          <figcaption class="cap">FMS 웹 관제 화면. 지도 위 로봇 3대의 위치와 상태가 실시간으로 갱신되고, 상단 콤보박스에서 교통 시나리오를 골라 실행합니다.</figcaption>
+        </figure>
+        <div>
+          <div class="blocktitle">시스템 구성 · 담당 영역</div>
+          <div class="diagram scroll-x"><!--SVG:1--></div>
+        </div>
+        <div>
+          <div class="blocktitle">내가 맡은 일</div>
+          <div class="g3 roles">
+            <div class="box"><h4><span>01</span>경로 탐색</h4><p>A*로 시작해 예약 상태를 반영하는 <b>Space-Time A*</b>로 확장했습니다. 기다릴지 돌아갈지를 도착 시각으로 비교합니다.</p></div>
+            <div class="box"><h4><span>02</span>시간 예약표</h4><p>노드와 통로를 자원으로 보고, 로봇마다 <b>언제부터 언제까지</b> 쓰는지 기록합니다. 시간 구간이 겹치면 확정하지 않습니다.</p></div>
+            <div class="box"><h4><span>03</span>교통 관리 분리</h4><p>시뮬레이터 안에 섞여 있던 예약·교착·허가 정책을 <b>TrafficManager(459줄)</b>로 옮겨 실물 실행기와 연결할 수 있게 했습니다.</p></div>
+          </div>
+        </div>
+        <figure>
+            <div class="blocktitle">"어느 길로"에 "언제"를 더하다</div>
+            <div class="diagram narrow"><!--SVG:2--></div>
+            <figcaption class="cap">R1이 통로를 쓰는 시간과 겹치지 않도록 R2는 N9에서 기다린 뒤 진입합니다. 방향이 달라도 같은 물리 통로는 하나의 자원 키 <code>("edge", 작은 ID, 큰 ID)</code>로 비교하고, 목적지 정차도 예약합니다.</figcaption>
+        </figure>
+          <div>
+            <div class="blocktitle">실행 시점의 주행 허가</div>
+            <p class="small">예약이 있어도 실제 위치가 계획과 다를 수 있어, 구간마다 출발 직전에 다시 확인합니다. 허가 판단은 상태와 예약표를 바꾸지 않습니다.</p>
+            <table class="perm" style="margin-top:14px">
+              <tr><td>allowed</td><td>요청·구간 예약, 출발 시각, 실제 점유, 예상 도착 시각 검사를 모두 통과</td></tr>
+              <tr><td>waiting</td><td>계획된 출발 시각 전. 예약은 그대로 둠</td></tr>
+              <tr><td>replan</td><td>예약 누락, 다른 로봇 점유, 시간표 초과. <b>정지가 확인된 뒤에만</b> 예약 해제</td></tr>
+            </table>
+          </div>
+        <div>
+          <div class="blocktitle">문제 · 해결 · 결과</div>
+          <div class="cases">
+            <div class="case"><h4>통로 하나를 두고 마주침</h4><dl class="psr">
+              <dt class="p">PROBLEM</dt><dd>처음에는 경로 전체를 한 로봇이 독점하도록 예약해, 대기 시간이 길고 마주 오는 통로에서 멈췄습니다.</dd>
+              <dt>SOLUTION</dt><dd>구간별 시간 창으로 쪼개 예약하고, 같은 자원에서 시간이 겹칠 때만 충돌로 판단했습니다.</dd>
+              <dt class="r">RESULT</dt><dd>병목·교차점에서 로봇이 순서대로 통과합니다.</dd></dl></div>
+            <div class="case"><h4>3대가 서로를 기다림</h4><dl class="psr">
+              <dt class="p">PROBLEM</dt><dd>로봇들이 서로의 다음 노드를 점유하면 아무도 움직이지 못했습니다.</dd>
+              <dt>SOLUTION</dt><dd>대기 관계에서 순환을 찾아 한 대를 빈 측면 노드로 양보시키고, 대피 뒤에도 진행 가능한지 복사본 상태로 먼저 검증했습니다.</dd>
+              <dt class="r">RESULT</dt><dd>양보한 로봇은 원래 목적지로 다시 계획해 복귀합니다.</dd></dl></div>
+            <div class="case"><h4>재계획 후 남은 이전 경로</h4><dl class="psr">
+              <dt class="p">PROBLEM</dt><dd>브랜치 병합 후 재계획에 실패하면 이전 경로가 화면과 상태에 남았습니다.</dd>
+              <dt>SOLUTION</dt><dd>초기화 누락 지점을 찾아, 실패하면 기존 route를 비우거나 직전 상태를 보존하도록 분기했습니다.</dd>
+              <dt class="r">RESULT</dt><dd>목적지 변경이 실패해도 상태가 엇갈리지 않습니다.</dd></dl></div>
+          </div>
+        </div>
+        <div>
+          <div class="blocktitle">검증 · 교통 시나리오 8종 (웹 · CLI 단일 실행)</div>
+          <div class="scen">
+            <div><b>bottleneck</b>9→7 합류 구간 예약 대기</div><div><b>head_on</b>두 로봇 자리 교환과 양보</div>
+            <div><b>cycle</b>세 로봇 순환 대기 해소</div><div><b>cycle_reverse</b>역순 요청의 순환 대기</div>
+            <div><b>central_head_on</b>중앙 통로 마주침·우회</div><div><b>junction</b>교차점 세 방향 순차 통과</div>
+            <div><b>swap_crossing</b>자리 교환 중 제3 로봇 통과</div><div><b>central_cycle</b>중앙 순환, 양보 후 복귀</div>
+          </div>
+          <p class="cap">시뮬레이션은 시작 위치를 복원해 30초 안에, 실물은 배치 위치를 0.15m 허용 오차로 확인한 뒤 180초 안에 끝나야 통과입니다. 실물 시작 위치가 틀리면 명령을 보내기 전에 거부 사유를 보여 줍니다.</p>
+        </div>
+        <div class="status"><b>진행 현황</b><span>실물 TurtleBot3 3대와 통합 검증 중입니다. 점유·예약 해제와 주행 흐름을 점검하고 있으며, 같은 조건에서 LLM 경로 판단과 비교하는 실험을 팀과 함께 설계하고 있습니다.</span></div>
+      </div>
+    </article>
+
+    <!-- ---------- P2 ---------- -->
+    <article class="project" id="p2">
+      <aside class="aside">
+        <span class="pno">P2</span> <span class="tag edu">교육</span>
+        <h3>STM32 무선 RC카</h3>
+        <p class="sub">조이스틱 무선 조종과 기울기에 반응하는 LCD 표시</p>
+        <div class="meta">
+          <div><span class="label">기간</span><span>2026.07 – 08</span></div>
+          <div><span class="label">인원</span><span>4인</span></div>
+          <div><span class="label">역할</span><span>가속도 센서·TFT LCD 연동, 표시 안정화</span></div>
+        </div>
+        <div class="chips"><span class="chip hot">C</span><span class="chip hot">STM32 HAL</span><span class="chip">ADXL345 (I2C)</span><span class="chip">ILI9341 (SPI)</span><span class="chip">UART · BT</span><span class="chip">TIM · PWM</span></div>
+        <div class="links"><a href="https://github.com/heeyeon5877-tech/Lcd_RC_Car_With_STM32">팀 저장소 →</a></div>
+      </aside>
+      <div class="content">
+        <p class="intro">STM32F411RE 보드 두 대를 블루투스 UART로 연결해 조이스틱으로 조종하는 RC카입니다. 저는 차체의 기울기를 읽어 LCD 캐릭터의 위치와 표정을 바꾸는 <b>센서-화면 연동</b>을 맡았습니다.</p>
+        <div class="g3 photos" style="grid-template-columns:1fr 1fr .7fr">
+          <figure><a class="shot" href="assets/rc_car.jpg" target="_blank" rel="noopener" style="aspect-ratio:3/4"><img src="assets/rc_car.jpg" alt="RC카 차체: 아크릴 섀시 위 TFT LCD에 캐릭터 표시" loading="lazy"></a><figcaption class="cap">차체 · 상단 LCD에 기울기 캐릭터</figcaption></figure>
+          <figure><a class="shot" href="assets/rc_controller.jpg" target="_blank" rel="noopener" style="aspect-ratio:3/4"><img src="assets/rc_controller.jpg" alt="조이스틱 컨트롤러 보드" loading="lazy"></a><figcaption class="cap">조종기 · 조이스틱 + 블루투스</figcaption></figure>
+          <figure><a class="shot" href="assets/rc_drive.jpg" target="_blank" rel="noopener" style="aspect-ratio:9/16"><img src="assets/rc_drive.jpg" alt="주행 시연 장면" loading="lazy"></a><figcaption class="cap">주행 시연</figcaption></figure>
+        </div>
+        <div>
+          <div class="blocktitle">데이터 흐름 · 담당 영역</div>
+          <div class="diagram scroll-x"><!--SVG:3--></div>
+        </div>
+        <div class="cases">
+          <div class="box split"><div><span class="label">표시 안정화 1</span><h4 style="margin-top:6px">미세 진동에 화면이 떨리지 않게</h4>
+            <p class="small" style="margin-top:8px">중앙 부근에 <b>데드존</b>을 두고, 기울기가 커질수록 빠르게 움직이는 <b>3제곱 이징 곡선</b>으로 바꿔 작은 흔들림은 무시하고 의도한 기울기만 반영했습니다.</p>
+            </div><div><!--SVG:4--></div></div>
+          <div class="box split"><div><span class="label">표시 안정화 2</span><h4 style="margin-top:6px">바뀐 부분만 다시 그리기</h4>
+            <p class="small" style="margin-top:8px">매 주기 화면 전체를 다시 그리면 깜빡이고 SPI 전송량이 늘었습니다. <b>이전 위치와 겹치지 않는 영역만 지우고</b> 새 위치를 그리는 부분 갱신으로 바꿨습니다.</p>
+            </div><div><!--SVG:5--></div></div>
+        </div>
+        <div>
+          <div class="blocktitle">트러블슈팅</div>
+          <div class="cases">
+            <div class="case"><h4>LCD ID 값이 예상과 다르게 읽힘</h4><dl class="psr">
+              <dt class="p">증상</dt><dd>RDDID(0x04) 명령으로 컨트롤러 ID를 읽으면 기대값(0x93, 0x41)과 달랐습니다.</dd>
+              <dt>원인</dt><dd>MISO 배선이 연결되지 않아 플로팅 상태의 핀 값이 우연히 읽혔습니다.</dd>
+              <dt>해결</dt><dd>FillScreen 색 채우기로 초기화 성공을 별도로 눈으로 확인하고 배선을 점검했습니다.</dd>
+              <dt class="r">배운 점</dt><dd>레지스터 읽기는 배선 상태에 좌우되므로 화면 출력 검증을 함께 둡니다.</dd></dl></div>
+            <div class="case"><h4>LCD 모듈의 SD카드 인식 실패</h4><dl class="psr">
+              <dt class="p">증상</dt><dd>LCD 모듈에 달린 SD카드가 인식되지 않고 읽기에 실패했습니다.</dd>
+              <dt>원인</dt><dd>코드 → 전압(3.3V→5V) 순으로 가설을 지운 끝에, DC/RS 핀 자리에 SD_CS가 꽂힌 배선 오류를 찾았습니다.</dd>
+              <dt>해결</dt><dd>핀맵을 다시 대조해 배선을 바로잡고 정상 인식을 확인했습니다.</dd>
+              <dt class="r">배운 점</dt><dd>가설을 하나씩 지우며 원인 범위를 좁히는 순서를 지킵니다.</dd></dl></div>
+          </div>
+        </div>
+        <div class="status"><b>팀 결과</b><span>조이스틱 입력 → 패킷 송수신 → 좌우 모터 PI 제어를 10ms 주기로 안정적으로 운용했고, 초음파 10cm 장애물 정지와 500ms fail-safe를 함께 동작시켰습니다. 계획했던 카메라(OV7670) 영상 저장은 기간 안에 완성하지 못해 최종 시스템에서 제외했습니다.</span></div>
+      </div>
+    </article>
+
+    <!-- ---------- P3 ---------- -->
+    <article class="project" id="p3">
+      <aside class="aside">
+        <span class="pno">P3</span> <span class="tag edu">교육</span>
+        <h3>AutoStore 가공·적재 설비</h3>
+        <p class="sub">가공 조건에 따라 창고 위치를 정하는 PLC 설비 제어</p>
+        <div class="meta">
+          <div><span class="label">기간</span><span>2026.06</span></div>
+          <div><span class="label">인원</span><span>2인</span></div>
+          <div><span class="label">역할</span><span>수동 시퀀스, HMI 화면 구성·PLC 연동</span></div>
+        </div>
+        <div class="chips"><span class="chip hot">Ladder</span><span class="chip hot">GX Works2</span><span class="chip">MELSEC-Q Q03UDV</span><span class="chip">GOT HMI</span><span class="chip">Servo</span></div>
+      </aside>
+      <div class="content">
+        <p class="intro">금속·비금속 소재를 드릴로 가공하고, 가공 시간과 횟수에 따라 창고 6칸 중 적재 위치를 정하는 설비입니다. 저는 <b>수동 시퀀스와 HMI 화면 구성·PLC 연동</b>을, 팀원은 자동 시퀀스를 맡았습니다.</p>
+        <figure>
+          <a class="shot" href="assets/plc_rig.jpg" target="_blank" rel="noopener" style="aspect-ratio:16/8"><img src="assets/plc_rig.jpg" alt="AutoStore 설비 앞에서 HMI 터치 패널을 조작하는 모습" style="object-position:center 40%" loading="lazy"></a>
+          <figcaption class="cap">실제 설비에서 HMI로 수동 적재를 실행하는 모습 (인물·주변 모자이크)</figcaption>
+        </figure>
+        <div class="g2" style="grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:start">
+          <div>
+            <div class="blocktitle">적재 위치 결정 규칙</div>
+            <div class="diagram"><!--SVG:6--></div>
+            <p class="cap">가공 시간으로 열을, 가공 횟수로 층을 정합니다. 칸별 소재 수는 D101–D106에 저장합니다.</p>
+          </div>
+          <div>
+            <div class="blocktitle">담당 기능</div>
+            <ul class="dots small">
+              <li><b>지정 적재(수동)</b> · 가공 시간·횟수를 입력하면 드릴 동작 후 위치를 정해 적재하고, 끝나면 시퀀스를 초기화합니다.</li>
+              <li><b>선택 비움(수동)</b> · 적재된 칸을 골라 해당 위치의 소재만 비웁니다.</li>
+              <li><b>사전 조건 확인</b> · 적재 전에는 칸이 비었는지, 비움 전에는 소재가 있는지 확인하고 아니면 하단 메시지로 알립니다.</li>
+              <li><b>HMI 4개 화면</b> · 메인, 서보, 자동, 수동 화면을 만들고 버튼·램프·메시지를 PLC 디바이스에 연결했습니다.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="g2">
+          <figure><a class="shot" href="assets/hmi_manual.jpg" target="_blank" rel="noopener"><img src="assets/hmi_manual.jpg" alt="수동 제어 HMI 화면: 창고 적재 램프와 비우기 버튼, 가공 횟수·시간 설정" loading="lazy"></a><figcaption class="cap">수동 제어 화면 · 창고 램프와 비우기 버튼, 가공 조건 입력</figcaption></figure>
+          <figure><a class="shot" href="assets/hmi_servo.jpg" target="_blank" rel="noopener"><img src="assets/hmi_servo.jpg" alt="서보 제어 HMI 화면: 서보 모터 상태 정보와 JOG 속도 설정" loading="lazy"></a><figcaption class="cap">서보 제어 화면 · 현재 위치·속도, JOG, 원점 복귀</figcaption></figure>
+        </div>
+        <div class="g2" style="grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:start">
+          <div>
+            <div class="blocktitle">사전 조건 확인 흐름 (지정 적재)</div>
+            <div class="diagram"><!--SVG:7--></div>
+          </div>
+          <div>
+            <div class="blocktitle">메시지 화면</div>
+            <div class="photos">
+              <a class="shot" href="assets/hmi_full.jpg" target="_blank" rel="noopener"><img src="assets/hmi_full.jpg" alt="이미 적재된 공간입니다 메시지가 표시된 HMI" loading="lazy"></a>
+              <a class="shot" href="assets/hmi_empty.jpg" target="_blank" rel="noopener"><img src="assets/hmi_empty.jpg" alt="현재 비어있는 공간입니다 메시지가 표시된 HMI" loading="lazy"></a>
+            </div>
+            <p class="cap">조건이 맞지 않으면 동작하지 않고 이유를 화면 하단에 알립니다.</p>
+          </div>
+        </div>
+        <div class="case"><h4>PLC 동작과 HMI 램프·메시지의 표시 시점이 어긋남</h4><dl class="psr">
+          <dt class="p">PROBLEM</dt><dd>설비는 적재를 끝냈는데 HMI 램프가 늦게 켜지거나 이전 메시지가 남았습니다.</dd>
+          <dt>CAUSE</dt><dd>PLC 내부 비트와 HMI 표시용 디바이스가 분리되어, 상태가 바뀌는 시점과 화면 값이 갱신되는 시점이 달랐습니다.</dd>
+          <dt>SOLUTION</dt><dd>동작 완료 시점에 표시용 디바이스를 함께 갱신하도록 내부 상태 연동 로직을 고쳤습니다.</dd>
+          <dt class="r">RESULT</dt><dd>적재·비움이 끝나는 순간 램프와 메시지가 설비 상태와 같은 값을 보여 줍니다.</dd></dl></div>
+      </div>
+    </article>
+
+    <!-- ---------- P4 ---------- -->
+    <article class="project" id="p4">
+      <aside class="aside">
+        <span class="pno">P4</span> <span class="tag work">실무</span>
+        <h3>그룹사 통합 메신저 Qpost</h3>
+        <p class="sub">분리 운영되던 사내 메신저를 하나의 구조로 통합하고, 외부 시스템과 연결</p>
+        <div class="meta">
+          <div><span class="label">회사</span><span>큐텐테크놀로지</span></div>
+          <div><span class="label">기간</span><span>2017.08 – 2024.08</span></div>
+          <div><span class="label">직급</span><span>선임연구원</span></div>
+        </div>
+        <div class="chips"><span class="chip steel">C++</span><span class="chip steel">MFC</span><span class="chip steel">SQLite</span><span class="chip">Broker 라이브러리</span><span class="chip">Graph REST API</span><span class="chip">WinDbg</span></div>
+      </aside>
+      <div class="content">
+        <p class="intro">그룹사가 늘면서 업무 목적과 사용자에 따라 따로 운영되던 메신저를 하나로 재구축했습니다. 기능을 단순히 합치지 않고, <b>사용자 데이터가 어디서 생겨 어떤 경로로 화면에 닿는지</b>부터 분석했습니다.</p>
+        <div>
+          <div class="blocktitle">기존 구조 → 통합 구조</div>
+          <div class="diagram scroll-x"><!--SVG:8--></div>
+        </div>
+        <div class="g2">
+          <div class="box"><span class="label">담당 범위</span>
+            <ul class="dots small" style="margin-top:6px">
+              <li><b>구조 설계</b> · 기존 메신저의 구조와 데이터 흐름을 분석해 통합 구조 설계</li>
+              <li><b>DB 설계</b> · 계열사별 조직도를 기준으로 사용자를 관리하는 테이블 구성</li>
+              <li><b>마이그레이션</b> · 기존 사용자의 로컬 DB를 통합 구조로 옮기는 전환 로직</li>
+              <li><b>이벤트 처리</b> · 메신저 내부 이벤트를 Broker 라이브러리로 처리</li>
+              <li><b>핵심 화면</b> · 로그인, 조직도, 채팅 목록, 모바일 포워딩, 설정</li>
+            </ul></div>
+          <div class="box tint"><span class="label">그 밖의 7년간 개발</span>
+            <ul class="dots small" style="margin-top:6px">
+              <li>그룹사 친구 추가·삭제, 스티커, 오픈 채팅</li>
+              <li>신규 그룹사 전용 메신저와 조직도, 출퇴근 체크인·체크아웃</li>
+              <li>모바일 수신 전용 채팅창, 메신저 전체 디자인 리뉴얼</li>
+              <li><b>SecurityManager</b> · PC의 Hotfix 내역과 설치 프로그램을 서버와 동기화하고 패치·삭제 알림을 받는 구조 설계</li>
+              <li>Teams 조직도 앱(C# Blazor) 기능 추가</li>
+            </ul></div>
+        </div>
+        <div>
+          <div class="blocktitle">Microsoft Teams 채팅 연동</div>
+          <div class="diagram scroll-x"><!--SVG:9--></div>
+          <p class="small" style="margin-top:12px">API를 일정 주기로 조회하되 <b>마지막 업데이트 시각을 로컬 DB에 저장해 비교</b>하는 방식으로 새 메시지만 골라, 같은 메시지가 두 번 뜨거나 빠지는 경우를 줄였습니다. 전용 채팅 UI는 사용자 피드백을 받아 여러 차례 개선했습니다.</p>
+        </div>
+        <div class="g2" style="grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);align-items:start">
+          <div class="case"><h4>사용자 환경에서만 발생한 비정상 종료</h4><dl class="psr">
+            <dt class="p">증상</dt><dd>특정 사용자 PC에서만 메신저가 종료되고, 개발 환경에서는 재현되지 않았습니다.</dd>
+            <dt>추적</dt><dd>발생 당시 사용 조건을 확인하고, WinDbg로 크래시 덤프의 호출 스택을 따라 실행 흐름을 거슬러 올라갔습니다.</dd>
+            <dt>원인</dt><dd>모바일 앱으로 대화하던 상대가 PC 메신저로 넘어와 대화를 이어갈 때, 수신 패킷의 특정 속성이 비어 있어 메모리 참조 오류가 났습니다.</dd>
+            <dt class="r">결과</dt><dd>빈 값을 처리하도록 수정해 종료를 막았고, 이후 새 기능마다 빈 값 같은 예외 조건을 먼저 점검합니다.</dd></dl></div>
+          <div class="diagram"><!--SVG:10--></div>
+        </div>
+        <div class="box tint"><span class="label">이전 회사 · 소프트보울 (2014–2016) · TrustForm</span>
+          <p class="small" style="margin-top:8px">MFC로 만든 XML/XForms 웹 UI 도구를 유지보수하며 <b>신한카드·국립중앙의료원 등 20여 개 고객사</b>를 전담했습니다. 고객사마다 다른 요구에 맞춰 WinInet HTTPS 통신, XML→JSON 변환 API, HTTP 오류 시 에러 페이지 전환을 구현했고, 키보드 보안 모듈(nProtect NOS)을 화면 생성·포커스 진입·이탈 시점에 맞춰 연동했습니다.</p></div>
+        <div class="status"><b>로봇 SW로 이어지는 점</b><span>흩어진 데이터를 하나의 상태 구조로 모으는 일은 FMS에서 로봇·주문·예약 상태를 한곳에서 관리하는 일과 같은 문제입니다.</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- =============================== CONTACT =============================== -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--accent-night)"><b style="color:#fff">04</b>Closing</div>
+    <h2 class="title">현장의 문제를 끝까지 따라가<br><em>소프트웨어로 해결하는</em> 로봇 SW 개발자가 되겠습니다</h2>
+    <p class="lead">시스템을 연결하고 장애를 추적해 온 9년의 방식은 로봇과 설비 앞에서도 그대로 통했습니다. 배우는 속도보다 한 번 맡은 흐름을 끝까지 책임지는 태도로 팀에 기여하겠습니다.</p>
+    <div class="promise">
+      <div><h4>먼저 흐름을 파악합니다</h4><p>장비의 동작 순서, 기존 소프트웨어 구조, 화면에 표시되는 데이터의 흐름부터 정리하고 일을 시작합니다.</p></div>
+      <div><h4>예외까지 검증합니다</h4><p>정상 동작뿐 아니라 빈 값, 순환 대기, 배선 불량 같은 예외 조건을 시나리오로 만들어 확인합니다.</p></div>
+      <div><h4>제때 공유합니다</h4><p>정한 시간 안에 풀리지 않으면 그때까지 확인한 내용을 정리해 바로 공유하고 함께 방향을 정합니다.</p></div>
+    </div>
+    <div class="clinks">
+      <a href="mailto:ksj9164@gmail.com"><span class="label">Email</span><span>ksj9164@gmail.com</span><span class="arrow">→</span></a>
+      <a href="https://github.com/sojeong-grotto"><span class="label">GitHub</span><span>github.com/sojeong-grotto</span><span class="arrow">→</span></a>
+      <a href="김소정_로봇SW_포트폴리오.pdf" download><span class="label">PDF</span><span>포트폴리오 PDF (A4 13장)</span><span class="arrow">↓</span></a>
+      <a href="print.html"><span class="label">Print</span><span>인쇄용 페이지 보기</span><span class="arrow">→</span></a>
+    </div>
+    <div class="foot"><span>© 2026 김소정</span><span>Pretendard · 직접 제작한 정적 페이지</span></div>
+  </div>
+</section>
+</main>
+
+<script>
+/* 현재 보고 있는 섹션을 메뉴에 표시 */
+(function () {
+  var links = [].slice.call(document.querySelectorAll('.menu a'));
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  if (!('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      links.forEach(function (a) { a.classList.remove('on'); });
+      var a = map[e.target.id];
+      if (a) {
+        a.classList.add('on');
+        var m = a.parentNode;
+        if (a.offsetLeft < m.scrollLeft || a.offsetLeft + a.offsetWidth > m.scrollLeft + m.clientWidth) m.scrollLeft = a.offsetLeft - 8;
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  Object.keys(map).forEach(function (id) { var s = document.getElementById(id); if (s) io.observe(s); });
+})();
+</script>
+</body>
+</html>
