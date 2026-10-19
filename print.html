@@ -89,68 +89,39 @@
 
 <!-- =============================== 02 ABOUT =============================== -->
 <section class="page" id="about">
-  <div class="run"><span>Kim Sojeong · Portfolio 2026</span><span class="sec">01 · 소개 · 핵심 역량</span></div>
-  <div class="eyebrow">About · Core Competencies</div>
+  <div class="run"><span>Kim Sojeong · Portfolio 2026</span><span class="sec">01 · 소개 · 기술 역량</span></div>
+  <div class="eyebrow">About · Skills &amp; Experience</div>
   <h1 class="title">화면 안의 소프트웨어에서,<br><em>장비를 움직이는 소프트웨어</em>로</h1>
   <p class="lead">9년 동안 C++/MFC로 업무 시스템과 사용자를 연결하는 클라이언트를 만들었습니다. 여러 시스템 사이의 데이터 흐름을 파악하고 문제의 근본 원인을 찾는 일에 가장 몰입했지만, 그 결과는 늘 화면 위에서 끝났습니다. 같은 방식으로 실제 장비를 움직이고 싶어 PLC, STM32, ROS 2를 차례로 익혔고, 지금은 다중 로봇 관제 시스템에서 경로 탐색과 교통 제어를 맡고 있습니다.</p>
 
-  <div class="eyebrow mt4">핵심 역량</div>
-  <div class="comp tight">
-    <div class="box">
-      <span class="k">01</span>
-      <h3>다중 로봇 경로·교통 제어</h3>
-      <p class="one">여러 로봇이 같은 노드와 통로를 쓸 때 경로뿐 아니라 사용 시간까지 계획합니다.</p>
-      <ul class="dots">
-        <li>A* 경로 탐색을 시간 축으로 확장한 Space-Time A*로 대기와 우회를 비교</li>
-        <li>노드·통로별 시간 예약표로 충돌을 사전에 차단</li>
-        <li>순환 대기 탐지, 측면 노드 양보 후 원래 목적지로 복귀</li>
-      </ul>
-      <div class="proof">근거 · <b>P1 다중 로봇 FMS</b> <span class="tag edu">교육</span></div>
+  <div class="eyebrow mt4">기술 역량 · 개발 경험</div>
+  <div class="cx">
+    <div class="cxb">
+      <div class="cxh"><span class="cxn">01</span><h3>다중 로봇 경로·교통 제어</h3></div>
+      <div class="cxk"><span>Python</span><span>ROS 2</span><span>Nav2</span><span>Gazebo</span><span>Linux (Ubuntu)</span></div>
+      <ul class="dots"><li>Space-Time A* 경로 탐색과 노드·통로 시간 예약표로 로봇 간 충돌을 사전에 차단</li><li>순환 대기를 탐지해 측면 노드로 양보시킨 뒤 원래 목적지로 복귀</li><li>예약·교착·주행 허가 정책을 실물 연동이 가능한 독립 서비스로 분리</li></ul>
+      <div class="cxe">근거 · <b>P1 다중 로봇 FMS</b></div>
     </div>
-    <div class="box">
-      <span class="k">02</span>
-      <h3>시스템 연동·데이터 흐름 설계</h3>
-      <p class="one">데이터가 어디서 생기고 어떤 경로로 화면과 장비에 닿는지부터 정리합니다.</p>
-      <ul class="dots">
-        <li>분리된 메신저 3종을 통합 구조와 DB로 재설계하고 마이그레이션</li>
-        <li>Graph REST API 주기 조회로 중복·누락을 줄인 메시지 동기화</li>
-        <li>FMS 정책 로직을 Mock·ROS에 의존하지 않는 독립 서비스로 분리</li>
-      </ul>
-      <div class="proof">근거 · <b>P4 통합 메신저</b> <span class="tag work">실무</span> · <b>P1</b></div>
+    <div class="cxb">
+      <div class="cxh"><span class="cxn">02</span><h3>시스템 연동·데이터 흐름 설계</h3></div>
+      <div class="cxk"><span>C++</span><span>SQL</span><span>SQLite</span><span>REST API (Microsoft Graph)</span></div>
+      <ul class="dots"><li>분리된 메신저를 통합 구조·DB로 재설계하고 로컬 DB 마이그레이션 구현</li><li>Graph REST API로 사내 메신저와 Teams 간 메시지 조회·전송·동기화</li><li>계열사별 조직도를 기준으로 사용자를 관리하는 DB 테이블 설계</li></ul>
+      <div class="cxe">근거 · <b>P4 통합 메신저</b></div>
     </div>
-    <div class="box">
-      <span class="k">03</span>
-      <h3>장비 제어·임베디드 구현</h3>
-      <p class="one">센서 입력과 설비 동작을 화면 상태와 같은 시점으로 맞춥니다.</p>
-      <ul class="dots">
-        <li>STM32 HAL로 가속도 센서(I2C)와 TFT LCD(SPI) 연동</li>
-        <li>PLC 래더로 가공 조건별 적재·비움 수동 시퀀스 구현</li>
-        <li>GOT HMI 4개 화면을 구성하고 PLC 디바이스와 연결</li>
-      </ul>
-      <div class="proof">근거 · <b>P2 STM32 RC카</b> · <b>P3 AutoStore PLC</b> <span class="tag edu">교육</span></div>
+    <div class="cxb">
+      <div class="cxh"><span class="cxn">03</span><h3>장비 제어·임베디드 구현</h3></div>
+      <div class="cxk"><span>C</span><span>STM32 HAL</span><span>STM32CubeIDE</span><span>MELSEC PLC</span></div>
+      <ul class="dots"><li>STM32 HAL로 가속도 센서(I2C)와 TFT LCD(SPI)를 연동해 상태 표시</li><li>PLC 래더로 적재·비움 수동 시퀀스를 만들고 HMI 화면과 연동</li><li>GOT HMI 4개 화면을 구성하고 램프·메시지를 PLC 상태와 동기화</li></ul>
+      <div class="cxe">근거 · <b>P2 STM32 RC카</b> · <b>P3 AutoStore PLC</b></div>
     </div>
-    <div class="box">
-      <span class="k">04</span>
-      <h3>장애 분석·안정화</h3>
-      <p class="one">재현되지 않는 문제도 조건을 좁혀 가며 원인을 확인하고 재발을 막습니다.</p>
-      <ul class="dots">
-        <li>WinDbg 크래시 덤프·호출 스택으로 사용자 환경 전용 오류 해결</li>
-        <li>LCD·SD카드 문제를 소프트웨어 → 전압 → 배선 순으로 좁혀 해결</li>
-        <li>교통 시나리오 8종을 웹·CLI에서 실행해 회귀 확인</li>
-      </ul>
-      <div class="proof">근거 · <b>P4</b> <span class="tag work">실무</span> · <b>P2</b> · <b>P1</b></div>
+    <div class="cxb">
+      <div class="cxh"><span class="cxn">04</span><h3>장애 분석·안정화</h3></div>
+      <div class="cxk"><span>Windows</span><span>Visual Studio</span><span>WinDbg</span></div>
+      <ul class="dots"><li>WinDbg 크래시 덤프·호출 스택으로 사용자 환경 전용 비정상 종료 해결</li><li>LCD·SD카드 문제를 소프트웨어 → 전압 → 배선 순으로 좁혀 해결</li><li>교통 시나리오 8종을 웹·CLI에서 실행해 변경 후 회귀 확인</li></ul>
+      <div class="cxe">근거 · <b>P4</b> · <b>P2</b> · <b>P1</b></div>
     </div>
   </div>
-
-  <div class="eyebrow mt3">기술 스택</div>
-  <div class="skills">
-    <div class="k2">Language</div><div><b>C++ (실무 9년)</b> · C · Python · Java · C#</div>
-    <div class="k2">Robot</div><div>ROS 2 (Jazzy) · Nav2 · TurtleBot3 · Zenoh · MQTT · A* / Space-Time A*</div>
-    <div class="k2">Backend · Web</div><div>FastAPI · WebSocket · REST API (Microsoft Graph) · React 화면 연동</div>
-    <div class="k2">Embedded · FA</div><div>STM32F411 HAL (I2C · SPI · UART · TIM) · MELSEC-Q (GX Works2, Ladder) · GOT HMI · Servo</div>
-    <div class="k2">Desktop · DB</div><div><b>MFC</b> · SQLite · MySQL · Oracle · WinInet</div>
-    <div class="k2">Tools</div><div>Git / GitHub · Jira · Confluence · WinDbg · Linux (Ubuntu) · pytest</div>
-  </div>
+  <div class="cxc"><span class="cxl">협업 도구</span><span>Git</span><i>/</i><span>GitHub</span><i>/</i><span>Jira</span><i>/</i><span>Confluence</span></div>
 
   <div class="grow"></div>
 
