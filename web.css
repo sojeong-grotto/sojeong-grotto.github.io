@@ -281,3 +281,14 @@ figure{margin:0}
 .shot.video video{display:block;width:100%;height:100%;object-fit:contain}
 .photos figure{min-width:0}
 .shot.video video{max-width:100%;min-width:0}
+
+/* 첫 화면 요약 */
+.hero .summary{margin-top:36px;padding-top:28px;border-top:1px solid #2f353e;font-size:17px;line-height:1.8;color:#c4cad3;max-width:880px}
+.hero .summary b{color:#fff;font-weight:700}
+
+/* 프로젝트 첫머리: 한 줄 요약 + 결과 */
+.tldr{display:grid;gap:12px;padding:20px 24px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 12px 12px 0}
+.tldr > div{display:grid;grid-template-columns:88px 1fr;gap:16px;align-items:baseline}
+.tldr .tl-l{font-size:13px;font-weight:800;color:var(--accent-ink);letter-spacing:.04em}
+.tldr p{font-size:16px;line-height:1.7;color:var(--ink)}
+@media (max-width:760px){.tldr > div{grid-template-columns:1fr;gap:2px}.tldr{padding:16px 18px}}

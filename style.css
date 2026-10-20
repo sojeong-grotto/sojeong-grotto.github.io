@@ -312,3 +312,28 @@ table.ov td{padding-top:4.6mm;padding-bottom:4.6mm}
 #about .cxb ul.dots{margin-left:0;font-size:9.8pt}
 #about .cxb ul.dots li{margin-top:2mm}
 #about .cxc{margin-top:0;padding-top:5mm}
+
+/* 표지 요약: 왜 로봇 SW인가 + 무엇을 잘하는가 */
+.cover .summary{margin-top:6mm;padding-top:5mm;border-top:1px solid #2c3139;font-size:9.6pt;line-height:1.7;color:#c4cad3}
+.cover .summary b{color:#fff;font-weight:700}
+/* 표지 공간 조정 (요약 추가분) */
+.cover .band{padding-top:12mm;padding-bottom:9mm}
+.cover .band .run{margin-bottom:5mm}
+.cover .summary{margin-top:5mm;padding-top:4mm}
+.cover .body{padding-top:6mm}
+.cover .kpi{padding:3.8mm 4.2mm 3.6mm}
+.cover .kpi .n{font-size:23pt}
+.cover .kpi .t{margin-top:1.8mm}
+.cover .focus{margin-top:4.5mm}
+.cover .tl.compact .item{padding-bottom:2.2mm}
+.cover .summary{line-height:1.6}
+.cover .tl.compact .what p{font-size:7.8pt;line-height:1.45}
+.cover .tl.compact .item{padding-bottom:1.8mm}
+.cover .eyebrow.mt4{margin-top:6mm}
+
+/* 프로젝트 첫머리: 한 줄 요약 + 결과 */
+.tldr{display:grid;gap:1.6mm;margin-top:3.6mm;padding:3.4mm 4.2mm;background:var(--accent-soft);border-left:2.4px solid var(--accent);border-radius:0 2mm 2mm 0}
+.tldr > div{display:grid;grid-template-columns:17mm 1fr;gap:3mm;align-items:baseline}
+.tldr .tl-l{font-size:7.6pt;font-weight:800;color:var(--accent-ink);letter-spacing:.04em}
+.tldr p{font-size:9.4pt;line-height:1.6;color:var(--ink)}
+@media screen and (max-width:820px){.tldr > div{grid-template-columns:1fr;gap:2px}}
