@@ -299,3 +299,16 @@ table.ov td{padding-top:4.6mm;padding-bottom:4.6mm}
 .cxc i{display:none}
 .cxk{gap:1mm;margin-bottom:.6mm}
 .cxk span{font-size:7.4pt;padding:.5mm 1.9mm}
+.focus b{color:var(--ink);font-weight:700}
+/* 2쪽: 블록 1단 배치 (좌: 분야·근거 / 우: 키워드·경험) */
+#about .cx{grid-template-columns:1fr;margin-top:5mm}
+#about .cxb{display:grid;grid-template-columns:64mm 1fr;gap:5mm;padding:6.4mm 0 7mm}
+#about .cxh{flex-direction:column;gap:1.4mm}
+#about .cxh h3{font-size:14.5pt;line-height:1.3}
+#about .cxn{font-size:10pt}
+#about .cxe{margin:3.4mm 0 0 0;font-size:8.4pt}
+#about .cxk{margin:0 0 1mm 0}
+#about .cxk span{font-size:8.2pt;padding:.7mm 2.6mm}
+#about .cxb ul.dots{margin-left:0;font-size:9.8pt}
+#about .cxb ul.dots li{margin-top:2mm}
+#about .cxc{margin-top:0;padding-top:5mm}

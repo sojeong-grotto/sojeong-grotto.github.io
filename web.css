@@ -275,3 +275,5 @@ figure{margin:0}
 .cxc{gap:8px}
 .cxc span:not(.cxl){font-size:14px;font-weight:600;padding:4px 13px;border-radius:99px;background:var(--tint);border:1px solid var(--line);color:var(--sub)}
 .cxc i{display:none}
+.focus b{color:#fff;font-weight:700}
+@media (max-width:760px){.br-d{display:none}}
