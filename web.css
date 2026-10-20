@@ -279,3 +279,5 @@ figure{margin:0}
 @media (max-width:760px){.br-d{display:none}}
 .shot.video{background:#000}
 .shot.video video{display:block;width:100%;height:100%;object-fit:cover}
+.photos figure{min-width:0}
+.shot.video video{max-width:100%;min-width:0}
