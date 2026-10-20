@@ -131,7 +131,7 @@
       </div>
       <div class="cxr">
         <div class="cxk"><span>Windows</span><span>Visual Studio</span><span>WinDbg</span></div>
-        <ul class="dots"><li>WinDbg 크래시 덤프·호출 스택으로 사용자 환경 전용 비정상 종료 해결</li><li>LCD·SD카드 문제를 소프트웨어 → 전압 → 배선 순으로 좁혀 해결</li><li>주요 교통 상황을 시나리오로 만들어 코드 변경 후 반복 검증</li></ul>
+        <ul class="dots"><li>WinDbg 크래시 덤프·호출 스택으로 사용자 환경 전용 비정상 종료 해결</li><li>LCD 응답 오류의 원인을 배선 점검으로 찾아 해결</li><li>주요 교통 상황을 시나리오로 만들어 코드 변경 후 반복 검증</li></ul>
       </div>
     </div>
   </div>
@@ -204,7 +204,7 @@
   </div>
 
   <figure class="mt2">
-    <div class="shot" style="height:70mm"><img src="assets/fms_ui.jpg" alt="FMS 웹 관제 화면: 노드 그래프 지도 위 로봇 3대와 주문 입력, 시나리오 실행 UI" style="object-position:left top"></div>
+    <div class="shot" style="height:64mm"><img src="assets/fms_ui.jpg" alt="FMS 웹 관제 화면: 노드 그래프 지도 위 로봇 3대와 주문 입력, 시나리오 실행 UI" style="object-position:left top"></div>
     <figcaption class="cap">FMS 웹 관제 화면. 노드 그래프 지도 위 로봇 3대의 위치와 상태가 실시간으로 갱신되고, 상단 콤보박스에서 교통 시나리오를 골라 실행합니다.</figcaption>
   </figure>
 
@@ -255,7 +255,7 @@
   <div class="g3 mt2">
     <div><h4>경로 탐색</h4><p class="small mt1">A*로 시작해 예약 상태를 반영하는 <b>Space-Time A*</b>로 확장. 기다릴지 돌아갈지를 도착 시각으로 비교합니다.</p></div>
     <div><h4>시간 예약표</h4><p class="small mt1">노드와 통로를 자원으로 보고, 로봇마다 <b>언제부터 언제까지</b> 쓰는지 기록합니다. 시간 구간이 겹치면 확정하지 않습니다.</p></div>
-    <div><h4>교통 관리 분리</h4><p class="small mt1">시뮬레이터 안에 섞여 있던 예약·교착·허가 정책을 <b>별도의 클래스 TrafficManager</b>로 옮겨 실물 실행기와 연결할 수 있게 했습니다.</p></div>
+    <div><h4>교통 관리 분리</h4><p class="small mt1">시뮬레이터 안에 섞여 있던 예약·교착·허가 정책을 <b>별도의 클래스</b>로 옮겨 실물 로봇과 연결할 수 있게 했습니다.</p></div>
   </div>
   <div class="foot"><span>김소정 · 로봇 SW 포트폴리오</span><span class="no">04 / 11</span></div>
 </section>
@@ -266,9 +266,9 @@
   <div class="eyebrow"><span class="pno">P1</span>Route Reservation &amp; Deadlock</div>
   <h1 class="title">"어느 길로"에 <em>"언제"</em>를 더해<br>로봇끼리 막히지 않게</h1>
 
-  <div class="g2 mt2" style="grid-template-columns:1.12fr 1fr;align-items:start">
-    <figure>
-      <svg data-name="p1-timeline" viewBox="0 0 380 210" width="100%" role="img" aria-label="시간 예약표 예시. R1이 통로 9-7을 먼저 예약하고, R2는 겹치는 시간을 피해 N9에서 기다린 뒤 통과한다.">
+  <div class="mt2" style="display:grid;grid-template-columns:1fr;gap:5mm">
+    <figure style="max-width:150mm">
+      <svg data-name="p1-timeline" viewBox="0 0 380 210" width="100%" role="img" aria-label="시간 예약표 예시. Robot1이 통로 9-7을 먼저 예약하고, Robot2는 겹치는 시간을 피해 Node 9에서 기다린 뒤 통과한다.">
         <g font-size="11">
           <text x="0" y="14" font-weight="700" fill="#15181d" font-size="11.5">시간 예약표 예시 · 9→7 합류 구간</text>
           <line x1="74" y1="182" x2="372" y2="182" stroke="#15181d" stroke-width="1"/>
@@ -277,25 +277,25 @@
           </g>
           <g stroke="#eef0f2"><line x1="134" y1="30" x2="134" y2="182"/><line x1="194" y1="30" x2="194" y2="182"/><line x1="254" y1="30" x2="254" y2="182"/><line x1="314" y1="30" x2="314" y2="182"/></g>
           <g font-weight="700" fill="#454d59" font-size="10.5">
-            <text x="0" y="56">노드 N9</text><text x="0" y="98">통로 9–7</text><text x="0" y="140">노드 N7</text>
+            <text x="0" y="56">Node 9</text><text x="0" y="98">통로 9–7</text><text x="0" y="140">Node 7</text>
           </g>
-          <!-- R1 -->
+          <!-- Robot1 -->
           <rect x="74" y="42" width="44" height="20" rx="3" fill="#25446f"/>
           <rect x="104" y="84" width="74" height="20" rx="3" fill="#25446f"/>
           <rect x="164" y="126" width="56" height="20" rx="3" fill="#25446f"/>
-          <!-- R2 -->
+          <!-- Robot2 -->
           <rect x="104" y="42" width="110" height="20" rx="3" fill="#e2541b" opacity=".18" stroke="#e2541b" stroke-dasharray="3 2"/>
-          <text x="159" y="56" text-anchor="middle" font-size="9.5" fill="#b8410f" font-weight="700">R2 대기</text>
+          <text x="159" y="56" text-anchor="middle" font-size="9.5" fill="#b8410f" font-weight="700">Robot2 대기</text>
           <rect x="196" y="84" width="74" height="20" rx="3" fill="#e2541b"/>
           <rect x="256" y="126" width="100" height="20" rx="3" fill="#e2541b"/>
           <text x="306" y="140" text-anchor="middle" font-size="9.5" fill="#fff" font-weight="700">목적지 정차</text>
-          <g font-size="9.5" fill="#fff" font-weight="700" text-anchor="middle"><text x="96" y="56">R1</text><text x="141" y="98">R1</text><text x="233" y="98">R2</text><text x="192" y="140">R1</text></g>
+          <g font-size="9.5" fill="#fff" font-weight="700" text-anchor="middle"><text x="96" y="56">Robot1</text><text x="141" y="98">Robot1</text><text x="233" y="98">Robot2</text><text x="192" y="140">Robot1</text></g>
           <rect x="178" y="80" width="18" height="28" fill="#fff" opacity=".0"/>
           <line x1="187" y1="72" x2="187" y2="116" stroke="#15181d" stroke-dasharray="2 2"/>
           <text x="187" y="168" text-anchor="middle" font-size="9.5" fill="#454d59">안전 여유</text>
         </g>
       </svg>
-      <figcaption class="cap">R1이 통로를 쓰는 시간과 겹치지 않도록 R2는 N9에서 기다린 뒤 진입합니다. 방향이 달라도 같은 물리 통로는 하나의 자원 키 <code>("edge", 작은 ID, 큰 ID)</code>로 비교합니다. 목적지 정차도 예약해 다른 로봇의 진입을 막습니다.</figcaption>
+      <figcaption class="cap">Robot1이 통로를 쓰는 시간과 겹치지 않도록 Robot2는 Node 9에서 기다린 뒤 진입합니다. 방향이 달라도 같은 물리 통로는 하나의 자원으로 비교하고, 목적지 정차도 예약해 다른 로봇의 진입을 막습니다.</figcaption>
     </figure>
     <div>
       <div class="label">실행 시점의 주행 허가</div>
@@ -305,34 +305,6 @@
         <tr><td>waiting</td><td>계획된 출발 시각 전. 예약은 그대로 둠</td></tr>
         <tr><td>replan</td><td>예약 누락, 다른 로봇 점유, 시간표 초과. <b>정지가 확인된 뒤에만</b> 예약 해제</td></tr>
       </table>
-    </div>
-  </div>
-
-  <div class="eyebrow mt3">문제 · 해결 · 결과</div>
-  <div class="g3" style="gap:5mm">
-    <div class="case">
-      <h4>통로 하나를 두고 마주침</h4>
-      <dl class="psr" style="grid-template-columns:1fr">
-        <dt class="p">PROBLEM</dt><dd>처음에는 경로 전체를 한 로봇이 독점하도록 예약해, 대기 시간이 길고 마주 오는 통로에서 멈췄습니다.</dd>
-        <dt>SOLUTION</dt><dd>구간별 시간 창으로 쪼개 예약하고, 같은 자원에서 시간이 겹칠 때만 충돌로 판단했습니다.</dd>
-        <dt class="r">RESULT</dt><dd>병목·교차점에서 로봇이 순서대로 통과합니다.</dd>
-      </dl>
-    </div>
-    <div class="case">
-      <h4>3대가 서로를 기다림</h4>
-      <dl class="psr" style="grid-template-columns:1fr">
-        <dt class="p">PROBLEM</dt><dd>로봇들이 서로의 다음 노드를 점유하면 아무도 움직이지 못했습니다.</dd>
-        <dt>SOLUTION</dt><dd>대기 관계에서 순환을 찾아 한 대를 빈 측면 노드로 양보시키고, 대피 뒤에도 진행 가능한지 복사본 상태로 먼저 검증했습니다.</dd>
-        <dt class="r">RESULT</dt><dd>양보한 로봇은 원래 목적지로 다시 계획해 복귀합니다.</dd>
-      </dl>
-    </div>
-    <div class="case">
-      <h4>재계획 후 남은 이전 경로</h4>
-      <dl class="psr" style="grid-template-columns:1fr">
-        <dt class="p">PROBLEM</dt><dd>브랜치 병합 후 재계획에 실패하면 이전 경로가 화면과 상태에 남았습니다.</dd>
-        <dt>SOLUTION</dt><dd>초기화 누락 지점을 찾아, 실패하면 기존 route를 비우거나 직전 상태를 보존하도록 분기했습니다.</dd>
-        <dt class="r">RESULT</dt><dd>목적지 변경이 실패해도 상태가 엇갈리지 않습니다.</dd>
-      </dl>
     </div>
   </div>
 
@@ -361,7 +333,7 @@
   <h1 class="title">STM32 무선 RC카<br><em>기울기에 반응하는 LCD 표시</em></h1>
   <div class="tldr">
     <div><span class="tl-l">한 줄 요약</span><p>조이스틱으로 조종하는 무선 RC카에서, 차체가 기울면 LCD 속 캐릭터가 따라 움직이도록 <b>기울기 센서와 화면을 연결</b>했습니다.</p></div>
-    <div><span class="tl-l">결과</span><p>기울기를 왼쪽·가운데·오른쪽 <b>3단계로 안정적으로 표시</b>하고, 바뀐 부분만 다시 그려 화면 깜빡임을 없앴습니다. LCD·SD카드 인식 문제는 <b>배선 오류를 찾아 해결</b>했습니다.</p></div>
+    <div><span class="tl-l">결과</span><p>기울기를 왼쪽·가운데·오른쪽 <b>3단계로 안정적으로 표시</b>하고, 바뀐 부분만 다시 그려 화면 깜빡임을 없앴습니다. LCD가 예상과 다르게 응답하던 문제는 <b>빠진 배선을 찾아 해결</b>했습니다.</p></div>
   </div>
 
   <div class="pmeta">
@@ -420,7 +392,6 @@
       <div class="eyebrow">트러블슈팅</div>
       <ul class="dots small">
         <li><b>LCD ID 불일치</b> · 기대값(0x93, 0x41)과 다르게 읽혀 확인해 보니 MISO 배선이 빠져 있었습니다. 화면 채우기 테스트로 초기화를 따로 검증했습니다.</li>
-        <li><b>SD카드 인식 실패</b> · 코드 → 전압 순으로 가설을 지운 끝에, DC/RS 핀 자리에 SD_CS가 꽂힌 배선 오류를 찾아 바로잡았습니다.</li>
       </ul>
     </div>
   </div>
