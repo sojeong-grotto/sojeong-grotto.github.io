@@ -268,38 +268,34 @@
         <figure>
           <a class="shot" href="assets/plc_rig.jpg" target="_blank" rel="noopener" style="aspect-ratio:16/8"><img src="assets/plc_rig.jpg" alt="AutoStore 설비 앞에서 HMI 터치 패널을 조작하는 모습" style="object-position:center 40%" loading="lazy"></a>
         </figure>
-        <div class="g2" style="grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:start">
+        <div>
+          <div class="blocktitle">담당 기능</div>
+          <ul class="dots small">
+            <li><b>지정 적재(수동)</b> · 가공 시간·횟수를 입력하면 드릴 동작 후 위치를 정해 적재하고, 끝나면 시퀀스를 초기화합니다.</li>
+            <li><b>선택 비움(수동)</b> · 적재된 칸을 골라 해당 위치의 소재만 비웁니다.</li>
+            <li><b>사전 조건 확인</b> · 적재 전에는 칸이 비었는지, 비움 전에는 소재가 있는지 확인하고 아니면 하단 메시지로 알립니다.</li>
+            <li><b>HMI 4개 화면</b> · 메인, 서보, 자동, 수동 화면을 만들고 버튼·램프·메시지를 PLC 디바이스에 연결했습니다.</li>
+          </ul>
+        </div>
+        <div class="g2 eqh">
           <div>
             <div class="blocktitle">적재 위치 결정 규칙</div>
             <div class="diagram"><!--SVG:p3-grid--></div>
             <p class="cap">가공 시간으로 열을, 가공 횟수로 층을 정합니다.</p>
           </div>
           <div>
-            <div class="blocktitle">담당 기능</div>
-            <ul class="dots small">
-              <li><b>지정 적재(수동)</b> · 가공 시간·횟수를 입력하면 드릴 동작 후 위치를 정해 적재하고, 끝나면 시퀀스를 초기화합니다.</li>
-              <li><b>선택 비움(수동)</b> · 적재된 칸을 골라 해당 위치의 소재만 비웁니다.</li>
-              <li><b>사전 조건 확인</b> · 적재 전에는 칸이 비었는지, 비움 전에는 소재가 있는지 확인하고 아니면 하단 메시지로 알립니다.</li>
-              <li><b>HMI 4개 화면</b> · 메인, 서보, 자동, 수동 화면을 만들고 버튼·램프·메시지를 PLC 디바이스에 연결했습니다.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="g2">
-          <figure><a class="shot" href="assets/hmi_manual.jpg" target="_blank" rel="noopener"><img src="assets/hmi_manual.jpg" alt="수동 제어 HMI 화면: 창고 적재 램프와 비우기 버튼, 가공 횟수·시간 설정" loading="lazy"></a><figcaption class="cap">수동 제어 화면 · 창고 램프와 비우기 버튼, 가공 조건 입력</figcaption></figure>
-          <figure><a class="shot" href="assets/hmi_servo.jpg" target="_blank" rel="noopener"><img src="assets/hmi_servo.jpg" alt="서보 제어 HMI 화면: 서보 모터 상태 정보와 JOG 속도 설정" loading="lazy"></a><figcaption class="cap">서보 제어 화면 · 현재 위치·속도, JOG, 원점 복귀</figcaption></figure>
-        </div>
-        <div class="g2" style="grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:start">
-          <div>
             <div class="blocktitle">사전 조건 확인 흐름 (지정 적재)</div>
             <div class="diagram"><!--SVG:p3-flow--></div>
-          </div>
-          <div>
-            <div class="blocktitle">메시지 화면</div>
-            <div class="photos">
-              <a class="shot" href="assets/hmi_full.jpg" target="_blank" rel="noopener"><img src="assets/hmi_full.jpg" alt="이미 적재된 공간입니다 메시지가 표시된 HMI" loading="lazy"></a>
-              <a class="shot" href="assets/hmi_empty.jpg" target="_blank" rel="noopener"><img src="assets/hmi_empty.jpg" alt="현재 비어있는 공간입니다 메시지가 표시된 HMI" loading="lazy"></a>
-            </div>
             <p class="cap">조건이 맞지 않으면 동작하지 않고 이유를 화면 하단에 알립니다.</p>
+          </div>
+        </div>
+        <div>
+          <div class="blocktitle">HMI 화면</div>
+          <div class="g2 hmi-grid">
+            <figure><a class="shot hmi" href="assets/hmi_manual.jpg" target="_blank" rel="noopener"><img src="assets/hmi_manual.jpg" alt="수동 제어 HMI 화면: 창고 적재 램프와 비우기 버튼, 가공 횟수·시간 설정" loading="lazy"></a><figcaption class="cap">수동 제어 · 창고 램프와 비우기 버튼, 가공 조건 입력</figcaption></figure>
+            <figure><a class="shot hmi" href="assets/hmi_servo.jpg" target="_blank" rel="noopener"><img src="assets/hmi_servo.jpg" alt="서보 제어 HMI 화면: 서보 모터 상태 정보와 JOG 속도 설정" loading="lazy"></a><figcaption class="cap">서보 제어 · 현재 위치·속도, JOG, 원점 복귀</figcaption></figure>
+            <figure><a class="shot hmi" href="assets/hmi_full.jpg" target="_blank" rel="noopener"><img src="assets/hmi_full.jpg" alt="이미 적재된 공간입니다 메시지가 표시된 HMI" loading="lazy"></a><figcaption class="cap">메시지 · 이미 적재된 칸을 선택한 경우</figcaption></figure>
+            <figure><a class="shot hmi" href="assets/hmi_empty.jpg" target="_blank" rel="noopener"><img src="assets/hmi_empty.jpg" alt="현재 비어있는 공간입니다 메시지가 표시된 HMI" loading="lazy"></a><figcaption class="cap">메시지 · 비어 있는 칸을 비우려는 경우</figcaption></figure>
           </div>
         </div>
         <div class="case"><h4>PLC 동작과 HMI 램프·메시지의 표시 시점이 어긋남</h4><dl class="psr">
