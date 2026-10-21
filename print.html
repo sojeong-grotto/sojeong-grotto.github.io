@@ -34,12 +34,12 @@
       <div class="kpi">
         <div class="n">9<span>년</span></div>
         <div class="t">C++/MFC 상용 SW 개발·운영</div>
-        <div class="d">그룹사 통합 메신저 구조·DB 설계, Teams 연동, WinDbg 장애 분석</div>
+        <div class="d">그룹사 통합 메신저 클라이언트 구조·로컬 DB 설계, Teams 연동, WinDbg 장애 분석</div>
       </div>
       <div class="kpi">
         <div class="n">1,500<span>명</span></div>
-        <div class="t">4개사 통합 메신저 설계·이전</div>
-        <div class="d">큐텐과 3개 계열사 직원이 함께 쓰는 메신저의 구조·DB 설계와 사용자 데이터 마이그레이션</div>
+        <div class="t">4개사 통합 메신저 클라이언트·DB 설계</div>
+        <div class="d">큐텐과 3개 계열사 직원이 함께 쓰는 메신저의 클라이언트 구조·로컬 DB 설계와 사용자 데이터 마이그레이션</div>
       </div>
       <div class="kpi">
         <div class="n">20<span>+ 곳</span></div>
@@ -64,7 +64,7 @@
       <div class="item">
         <div class="when">2017.08 – 2024.08<br><span style="font-weight:500;color:var(--mute)">7년 1개월</span></div>
         <div class="what"><h4>큐텐테크놀로지 · 선임연구원 <span class="tag work">실무</span></h4>
-          <p>사내 메신저 Qpost 클라이언트(MFC) 개발·운영 · 그룹사 통합 메신저 구조·DB 설계와 데이터 마이그레이션 · Microsoft Teams 채팅 연동(Graph REST API) · 보안 관리 프로그램 SecurityManager 개발 · Teams 조직도 앱(C# Blazor) 유지보수</p></div>
+          <p>사내 메신저 Qpost 클라이언트(MFC) 개발·운영 · 그룹사 통합 메신저 클라이언트 구조·로컬 DB 설계와 데이터 마이그레이션 · Microsoft Teams 채팅 연동(Graph REST API) · 보안 관리 프로그램 SecurityManager 개발 · Teams 조직도 앱(C# Blazor) 유지보수</p></div>
       </div>
       <div class="item">
         <div class="when">2014.11 – 2016.09<br><span style="font-weight:500;color:var(--mute)">1년 11개월</span></div>
@@ -131,7 +131,7 @@
       </div>
       <div class="cxr">
         <div class="cxk"><span>Windows</span><span>Visual Studio</span><span>WinDbg</span></div>
-        <ul class="dots"><li>WinDbg 크래시 덤프·호출 스택 분석으로 재현되지 않는 사용자 환경 장애를 추적·해결</li><li>LCD 응답 오류의 원인을 배선 점검으로 찾아 해결</li><li>주요 교통 상황을 시나리오로 만들어 코드 변경 후 반복 검증</li></ul>
+        <ul class="dots"><li>WinDbg 크래시 덤프·호출 스택 분석으로 재현되지 않는 사용자 환경 장애를 추적·해결</li><li>LCD ID 읽기 이상을 배선 상태와 연결해 분석하고 화면 출력으로 초기화를 별도 검증</li><li>주요 교통 상황을 시나리오로 만들어 코드 변경 후 반복 검증</li></ul>
       </div>
     </div>
   </div>
@@ -174,7 +174,7 @@
         <td class="th"><div class="tthumb"><div class="thumb-dark"><span>C++ · MFC · SQLite</span><b>Messenger A·B·C<br>→ Qpost</b></div></div></td>
         <td><div class="pg">P4 · p.09</div><div class="pt">그룹사 통합 메신저 Qpost</div><div class="small">큐텐과 3개 계열사, 약 1,500명이 쓰는 통합 메신저로 재구축</div></td>
         <td>2017.08 – 2024.08<br>큐텐테크놀로지 <span class="tag work">실무</span></td>
-        <td>통합 구조·DB 설계, 로컬 DB 마이그레이션, Teams 연동<br><b>재현되지 않는 사용자 환경 장애 추적·해결</b></td>
+        <td>클라이언트 구조·로컬 DB 설계, 데이터 마이그레이션, Teams 연동<br><b>재현되지 않는 사용자 환경 장애 추적·해결</b></td>
       </tr>
     </tbody>
   </table>
@@ -331,7 +331,7 @@
   <h1 class="title">STM32 무선 RC카<br><em>기울기에 반응하는 LCD 표시</em></h1>
   <div class="tldr">
     <div><span class="tl-l">한 줄 요약</span><p>조이스틱으로 조종하는 무선 RC카에서, <b>가속도 센서 값을 LCD 표시 좌표와 상태로 변환</b>해, 차체 기울기에 따라 화면이 반응하도록 구현했습니다.</p></div>
-    <div><span class="tl-l">결과</span><p>기울기를 왼쪽·가운데·오른쪽 <b>3단계로 안정적으로 표시</b>하고, 변경 영역만 갱신해 화면 깜빡임을 없앴습니다. LCD 응답 오류는 <b>원인(MISO 배선 미연결)을 찾아 해결</b>했습니다.</p></div>
+    <div><span class="tl-l">결과</span><p>기울기를 왼쪽·가운데·오른쪽 <b>3단계로 안정적으로 표시</b>하고, 변경 영역만 갱신해 화면 깜빡임을 줄였습니다. LCD ID 읽기 이상은 <b>MISO 배선 상태와 연결해 분석</b>하고, 색 채우기 테스트로 화면 초기화 여부를 별도로 확인했습니다.</p></div>
   </div>
 
   <div class="pmeta">
@@ -382,14 +382,14 @@
     <div>
       <div class="eyebrow">표시 안정화</div>
       <ul class="dots small">
-        <li><b>노이즈 억제</b> · 가속도 원시값을 그대로 쓰면 주행 진동까지 화면에 반영되어, 데드존과 3제곱 이징 곡선으로 의도한 기울기만 반영했습니다.</li>
+        <li><b>노이즈 억제</b> · 가속도 원시값을 그대로 쓰면 주행 진동까지 화면에 반영되어, 데드존과 3제곱 이징 곡선으로 작은 입력 변화에 대한 화면 반응을 줄였습니다.</li>
         <li><b>부분 갱신</b> · 매 주기 전체 화면을 다시 그리는 대신 변경 영역만 갱신해, 깜빡임과 SPI 전송량을 줄였습니다.</li>
       </ul>
     </div>
     <div>
       <div class="eyebrow">트러블슈팅</div>
       <ul class="dots small">
-        <li><b>LCD ID 불일치</b> · 컨트롤러 ID가 기대값(0x93, 0x41)과 다르게 읽혔고, 원인은 MISO 배선 미연결로 인한 플로팅 입력이었습니다. 화면 채우기 테스트로 초기화를 별도 검증했습니다.</li>
+        <li><b>LCD ID 읽기 이상</b> · 컨트롤러 ID가 기대값(0x93, 0x41)과 다르게 읽혀, MISO 배선 미연결로 인한 플로팅 입력 가능성과 연결해 분석했습니다. 색 채우기 테스트로 화면 초기화 여부를 별도로 확인했습니다.</li>
       </ul>
     </div>
   </div>
@@ -508,7 +508,7 @@
 <section class="page" id="p4">
   <div class="run"><span>Kim Sojeong · Portfolio 2026</span><span class="sec">P4 · 실무 · 통합 메신저</span></div>
   <div class="eyebrow"><span class="pno">P4</span>Work Experience · C++ / MFC</div>
-  <h1 class="title">그룹사 통합 메신저 Qpost<br><em>구조·DB 설계와 외부 시스템 연동</em></h1>
+  <h1 class="title">그룹사 통합 메신저 Qpost<br><em>클라이언트·로컬 DB 설계와 외부 연동</em></h1>
   <div class="tldr">
     <div><span class="tl-l">한 줄 요약</span><p>업무 목적과 사용자에 따라 나뉘어 있던 메신저를, <b>큐텐과 3개 계열사 직원 약 1,500명</b>이 함께 쓰는 하나의 통합 메신저로 재구축했습니다.</p></div>
     <div><span class="tl-l">결과</span><p>기존 로컬 DB를 통합 스키마로 변환하는 <b>마이그레이션</b>과 <b>Microsoft Teams 메시지 연동</b>을 구현했고, 개발 환경에서 재현되지 않는 <b>사용자 환경의 장애를 발생 조건과 실행 흐름을 따라 추적해 해결</b>했습니다.</p></div>
