@@ -131,7 +131,7 @@
       </div>
       <div class="cxr">
         <div class="cxk"><span>Windows</span><span>Visual Studio</span><span>WinDbg</span></div>
-        <ul class="dots"><li>WinDbg 크래시 덤프·호출 스택으로 사용자 환경 전용 비정상 종료 해결</li><li>LCD 응답 오류의 원인을 배선 점검으로 찾아 해결</li><li>주요 교통 상황을 시나리오로 만들어 코드 변경 후 반복 검증</li></ul>
+        <ul class="dots"><li>WinDbg 크래시 덤프·호출 스택 분석으로 재현되지 않는 사용자 환경 장애를 추적·해결</li><li>LCD 응답 오류의 원인을 배선 점검으로 찾아 해결</li><li>주요 교통 상황을 시나리오로 만들어 코드 변경 후 반복 검증</li></ul>
       </div>
     </div>
   </div>
@@ -174,7 +174,7 @@
         <td class="th"><div class="tthumb"><div class="thumb-dark"><span>C++ · MFC · SQLite</span><b>Messenger A·B·C<br>→ Qpost</b></div></div></td>
         <td><div class="pg">P4 · p.09–10</div><div class="pt">그룹사 통합 메신저 Qpost</div><div class="small">큐텐과 3개 계열사, 약 1,500명이 쓰는 통합 메신저로 재구축</div></td>
         <td>2017.08 – 2024.08<br>큐텐테크놀로지 <span class="tag work">실무</span></td>
-        <td>통합 구조·DB 설계, 로컬 DB 마이그레이션, Teams 연동, 크래시 분석<br><b>사용자 환경 전용 비정상 종료 원인 규명·수정</b></td>
+        <td>통합 구조·DB 설계, 로컬 DB 마이그레이션, Teams 연동, 크래시 분석<br><b>재현되지 않는 사용자 환경 장애 추적·해결</b></td>
       </tr>
     </tbody>
   </table>
@@ -513,7 +513,7 @@
   <h1 class="title">그룹사 통합 메신저 Qpost<br><em>구조·DB 설계와 데이터 이전</em></h1>
   <div class="tldr">
     <div><span class="tl-l">한 줄 요약</span><p>업무 목적과 사용자에 따라 나뉘어 있던 메신저를, <b>큐텐과 3개 계열사 직원 약 1,500명</b>이 함께 쓰는 하나의 통합 메신저로 다시 만들었습니다.</p></div>
-    <div><span class="tl-l">결과</span><p>기존 사용자 데이터를 새 구조로 옮기는 <b>마이그레이션</b>과 <b>Microsoft Teams 메시지 연동</b>을 구현했고, 사용자 PC에서만 발생하던 <b>비정상 종료의 원인을 찾아 해결</b>했습니다.</p></div>
+    <div><span class="tl-l">결과</span><p>기존 사용자 데이터를 새 구조로 옮기는 <b>마이그레이션</b>과 <b>Microsoft Teams 메시지 연동</b>을 구현했고, 개발 환경에서 재현되지 않는 <b>사용자 환경의 장애를 발생 조건과 실행 흐름을 따라 추적해 해결</b>했습니다.</p></div>
   </div>
   <p class="lead" style="margin-top:2mm">그룹사가 늘면서 업무 목적과 사용자에 따라 따로 운영되던 메신저를 하나로 재구축했습니다. 기능을 단순히 합치지 않고, 사용자 데이터가 어디서 생겨 어떤 경로로 화면에 닿는지부터 분석했습니다.</p>
 
@@ -552,9 +552,8 @@
     </g>
   </svg>
 
-  <div class="g2 mt3">
-    <div class="box">
-      <div class="label">담당 범위</div>
+  <div class="box mt3">
+    <div class="label">담당 범위</div>
       <ul class="dots small mt1">
         <li><b>구조 설계</b> · 기존 메신저의 구조와 데이터 흐름을 분석해 통합 메신저 구조를 설계</li>
         <li><b>DB 설계</b> · 계열사별 조직도를 기준으로 사용자를 관리하는 테이블 구성</li>
@@ -562,32 +561,20 @@
         <li><b>이벤트 처리</b> · 메신저 내부 이벤트를 Broker 라이브러리로 처리</li>
         <li><b>핵심 화면</b> · 로그인, 조직도, 채팅 목록, 모바일 포워딩, 설정</li>
       </ul>
-    </div>
-    <div class="box tint">
-      <div class="label">그 밖의 7년간 개발</div>
-      <ul class="dots small mt1">
-        <li>그룹사 친구 추가·삭제, 스티커, 오픈 채팅</li>
-        <li>신규 그룹사 전용 메신저와 조직도 추가</li>
-        <li>출퇴근 체크인·체크아웃, 모바일 수신 전용 채팅창</li>
-        <li>메신저 전체 디자인 리뉴얼</li>
-        <li><b>SecurityManager</b> · PC의 Hotfix 내역과 설치 프로그램을 서버와 동기화하고, 패치·삭제 알림을 받는 구조 설계</li>
-        <li>Teams 조직도 앱(C# Blazor) 기능 추가</li>
-      </ul>
-    </div>
   </div>
   <div class="foot"><span>김소정 · 로봇 SW 포트폴리오</span><span class="no">09 / 11</span></div>
 </section>
 
 <!-- =============================== 12 P4-2 =============================== -->
 <section class="page" id="p4b">
-  <div class="run"><span>Kim Sojeong · Portfolio 2026</span><span class="sec">P4 · 실무 · 연동 · 장애 분석 · 2 / 2</span></div>
-  <div class="eyebrow"><span class="pno">P4</span>Integration &amp; Crash Analysis</div>
-  <h1 class="title">외부 시스템을 연결하고,<br><em>재현되지 않는 장애</em>를 추적하다</h1>
+  <div class="run"><span>Kim Sojeong · Portfolio 2026</span><span class="sec">P4 · 실무 · 외부 연동 · 2 / 2</span></div>
+  <div class="eyebrow"><span class="pno">P4</span>Integration</div>
+  <h1 class="title">외부 시스템과 연결하고,<br><em>고객사마다 다른 요구</em>에 맞추다</h1>
 
   <div class="box mt3">
     <div class="label">A · Microsoft Teams 채팅 연동</div>
     <h3 class="mt1">사내 메신저에서 Teams 사용자와 대화하기</h3>
-    <svg data-name="p4-teams" viewBox="0 0 720 96" width="100%" class="mt1" role="img" aria-label="Graph REST API를 주기적으로 조회하고, 로컬 DB의 마지막 업데이트 시간과 비교해 신규 메시지만 메신저에 표시한다. 송신은 반대 방향으로 API를 호출한다.">
+    <svg data-name="p4-teams" viewBox="0 0 720 112" width="100%" class="mt1" role="img" aria-label="Graph REST API를 주기적으로 조회하고, 로컬 DB의 마지막 업데이트 시간과 비교해 신규 메시지만 메신저에 표시한다. 송신은 반대 방향으로 API를 호출한다.">
       <defs><marker id="ar5" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7d8592"/></marker></defs>
       <g font-size="11" text-anchor="middle">
         <g fill="#f6f6f4" stroke="#e2e4e8"><rect x="0" y="10" width="150" height="50" rx="6"/><rect x="190" y="10" width="160" height="50" rx="6"/><rect x="560" y="10" width="160" height="50" rx="6"/></g>
@@ -598,33 +585,23 @@
         <text x="640" y="32" font-weight="700" fill="#15181d">Teams 전용 채팅 UI</text><text x="640" y="49" font-size="9.8" fill="#454d59">표시 · 피드백 반영</text>
         <g stroke="#7d8592" stroke-width="1.3" marker-end="url(#ar5)"><line x1="151" y1="35" x2="187" y2="35"/><line x1="351" y1="35" x2="387" y2="35"/><line x1="531" y1="35" x2="557" y2="35"/></g>
         <path d="M640,62 C640,90 75,90 75,64" fill="none" stroke="#25446f" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#ar5)"/>
-        <text x="360" y="86" font-size="9.8" fill="#25446f" font-weight="600">송신 · 메신저 입력을 Graph API로 Teams 사용자에게 전달</text>
+        <text x="360" y="106" font-size="9.8" fill="#25446f" font-weight="600">송신 · 메신저 입력을 Graph API로 Teams 사용자에게 전달</text>
       </g>
     </svg>
-    <p class="small mt1">API를 일정 주기로 조회하되 <b>마지막 업데이트 시각을 로컬 DB에 저장해 비교</b>하는 방식으로 새 메시지만 골라, 같은 메시지가 두 번 뜨거나 빠지는 경우를 줄였습니다. 전용 채팅 UI는 사용자 피드백을 받아 여러 차례 개선했습니다.</p>
+    <p class="small mt1">API를 일정 주기로 조회하되 <b>마지막 업데이트 시각을 로컬 DB에 저장해 비교</b>하는 방식으로 새 메시지만 골라, 같은 메시지가 두 번 뜨거나 빠지는 경우를 줄였습니다.</p>
   </div>
 
+
   <div class="box mt3">
-    <div class="label">B · 사용자 환경에서만 발생한 비정상 종료</div>
-    <h3 class="mt1">WinDbg로 크래시 덤프를 따라가 원인 확인</h3>
-    <div class="g2 mt1" style="grid-template-columns:1.05fr 1fr;align-items:start">
-      <dl class="psr">
-        <dt class="p">증상</dt><dd>특정 사용자 PC에서만 메신저가 종료되고, 개발 환경에서는 재현되지 않았습니다.</dd>
-        <dt>추적</dt><dd>발생 당시 사용 조건을 확인하고, 크래시 덤프의 호출 스택으로 실행 흐름을 거슬러 올라갔습니다.</dd>
-        <dt>원인</dt><dd>모바일 앱으로 대화하던 상대가 PC 메신저로 넘어와 대화를 이어갈 때, 수신 패킷의 특정 속성이 비어 있어 메모리 참조 오류가 났습니다.</dd>
-        <dt class="r">결과</dt><dd>빈 값을 처리하도록 수정해 종료를 막았고, 이후 새 기능마다 빈 값 같은 예외 조건을 먼저 점검합니다.</dd>
-      </dl>
-      <svg data-name="p4-crash" viewBox="0 0 300 200" width="100%" role="img" aria-label="원인 범위 좁히기: 사용 조건 확인, 덤프 확보, 호출 스택 분석, 수신 패킷 확인, 빈 값 처리 수정">
-        <g font-size="10.5">
-          <g fill="#f6f6f4" stroke="#e2e4e8">
-            <rect x="0" y="0" width="300" height="34" rx="5"/><rect x="24" y="40" width="252" height="34" rx="5"/><rect x="48" y="80" width="204" height="34" rx="5"/><rect x="72" y="120" width="156" height="34" rx="5"/>
-          </g>
-          <rect x="96" y="160" width="108" height="34" rx="5" fill="#e2541b"/>
-          <g text-anchor="middle" fill="#15181d"><text x="150" y="21">사용자 환경 · 발생 조건 확인</text><text x="150" y="61">크래시 덤프 확보</text><text x="150" y="101">호출 스택 · 실행 흐름</text><text x="150" y="141">수신 패킷 속성</text></g>
-          <text x="150" y="181" text-anchor="middle" fill="#fff" font-weight="700">빈 값 처리</text>
-        </g>
-      </svg>
-    </div>
+    <div class="label">B · 그 밖의 7년간 개발</div>
+      <ul class="dots small mt1 cols2">
+        <li>그룹사 친구 추가·삭제, 스티커, 오픈 채팅</li>
+        <li>신규 그룹사 전용 메신저와 조직도 추가</li>
+        <li>출퇴근 체크인·체크아웃, 모바일 수신 전용 채팅창</li>
+        <li>메신저 전체 디자인 리뉴얼</li>
+        <li><b>SecurityManager</b> · PC의 Hotfix 내역과 설치 프로그램을 서버와 동기화하고, 패치·삭제 알림을 받는 구조 설계</li>
+        <li>Teams 조직도 앱(C# Blazor) 기능 추가</li>
+      </ul>
   </div>
 
   <div class="box tint mt3">

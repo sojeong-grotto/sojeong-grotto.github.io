@@ -337,3 +337,5 @@ table.ov td{padding-top:4.6mm;padding-bottom:4.6mm}
 .tldr .tl-l{font-size:7.6pt;font-weight:800;color:var(--accent-ink);letter-spacing:.04em}
 .tldr p{font-size:9.4pt;line-height:1.6;color:var(--ink)}
 @media screen and (max-width:820px){.tldr > div{grid-template-columns:1fr;gap:2px}}
+ul.dots.cols2{column-count:2;column-gap:7mm}
+ul.dots.cols2 li{break-inside:avoid}
