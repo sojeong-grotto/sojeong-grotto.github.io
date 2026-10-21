@@ -374,8 +374,8 @@
       </aside>
       <div class="content">
         <div class="tldr">
-          <div><span class="tl-l">한 줄 요약</span><p>가공 시간·횟수에 따라 창고 6칸 중 적재 위치를 결정하는 설비를 <b>PLC 래더로 제어</b>하고, 운전 조작용 <b>HMI 화면</b>을 구성했습니다.</p></div>
-          <div><span class="tl-l">결과</span><p>지정 적재·선택 비움 수동 시퀀스를 구현하고, <b>설비 동작 완료 시점과 HMI 램프·메시지 표시를 동기화</b>했습니다.</p></div>
+          <div><span class="tl-l">한 줄 요약</span><p>가공 시간·횟수에 따라 창고 6칸 중 적재 위치를 결정하는 설비에서 <b>수동 제어 시퀀스를 PLC 래더로 구현</b>하고, 운전 조작용 <b>HMI 화면</b>을 구성했습니다.</p></div>
+          <div><span class="tl-l">결과</span><p>지정 적재·선택 비움 기능과 사전 조건 확인을 구현하고, <b>설비 동작 완료 시점과 HMI 램프·메시지 표시를 동기화</b>했습니다.</p></div>
         </div>
         <p class="intro">저는 <b>수동 시퀀스와 HMI 화면 구성·PLC 연동</b>을, 팀원은 자동 시퀀스를 맡았습니다.</p>
         <figure>
@@ -445,7 +445,7 @@
           <dt class="p">PROBLEM</dt><dd>설비는 적재를 끝냈는데 HMI 램프가 늦게 켜지거나 이전 메시지가 남았습니다.</dd>
           <dt>CAUSE</dt><dd>PLC 내부 비트와 HMI 표시용 디바이스가 분리되어, 상태가 바뀌는 시점과 화면 값이 갱신되는 시점이 달랐습니다.</dd>
           <dt>SOLUTION</dt><dd>동작 완료 시점에 표시용 디바이스를 함께 갱신하도록 내부 상태 연동 로직을 고쳤습니다.</dd>
-          <dt class="r">RESULT</dt><dd>적재·비움이 끝나는 순간 램프와 메시지가 설비 상태와 같은 값을 보여 줍니다.</dd></dl></div>
+          <dt class="r">RESULT</dt><dd>적재·비움 완료 상태가 표시용 디바이스에 반영되어, HMI 램프와 메시지가 설비 상태에 맞게 갱신됩니다.</dd></dl></div>
       </div>
     </article>
 
