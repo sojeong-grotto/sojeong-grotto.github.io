@@ -25,7 +25,7 @@
       </div>
       <div class="photo"><img src="assets/photo.jpg" alt="김소정 증명사진"></div>
     </div>
-    <p class="summary">9년간 C++로 메신저·업무 시스템을 만들며 <b>시스템 사이의 데이터 흐름을 설계하고 장애 원인을 끝까지 추적</b>해 왔습니다. 그 결과가 화면에서 끝나지 않고 실제 장비의 움직임으로 이어지길 원해 장비 제어·로봇 SW로 전환했고, 지금은 ROS 2 기반 다중 로봇 관제 시스템에서 <b>로봇들이 서로 막히지 않도록 경로와 통행 순서를 조율하는 기능</b>을 맡고 있습니다.</p>
+    <p class="summary">9년간 C++ 기반 메신저·업무 시스템을 개발하며 <b>시스템 간 데이터 흐름을 설계하고 장애 원인을 분석</b>해 왔습니다. 이 경험을 장비 제어·로봇 SW로 확장하고 있으며, 현재 ROS 2 기반 다중 로봇 관제 시스템에서 <b>경로 탐색·자원 예약·통행 제어 기능</b>을 개발하고 있습니다.</p>
   </div>
 
   <div class="body">
@@ -205,7 +205,7 @@
 
   <figure class="mt2">
     <div class="shot" style="height:64mm"><img src="assets/fms_ui.jpg" alt="FMS 웹 관제 화면: 노드 그래프 지도 위 로봇 3대와 주문 입력, 시나리오 실행 UI" style="object-position:left top"></div>
-    <figcaption class="cap">FMS 웹 관제 화면. 노드 그래프 지도 위 로봇 3대의 위치와 상태가 실시간으로 갱신되고, 상단 콤보박스에서 교통 시나리오를 골라 실행합니다.</figcaption>
+    <figcaption class="cap">FMS 웹 관제 화면. 노드 그래프 지도 위 로봇 3대의 위치와 상태가 실시간으로 갱신되고, 상단 콤보박스에서 교통 시나리오를 골라 테스트합니다.</figcaption>
   </figure>
 
   <div class="eyebrow mt3">시스템 구성 · 담당 영역</div>
@@ -268,7 +268,7 @@
 
   <div class="mt2" style="display:grid;grid-template-columns:1fr;gap:5mm">
     <figure style="max-width:150mm">
-      <svg data-name="p1-timeline" viewBox="0 0 380 210" width="100%" role="img" aria-label="시간 예약표 예시. Robot1이 통로 9-7을 먼저 예약하고, Robot2는 겹치는 시간을 피해 Node 9에서 기다린 뒤 통과한다.">
+      <svg data-name="p1-timeline" viewBox="0 0 380 210" width="100%" role="img" aria-label="시간 예약표 예시. Robot1이 Edge 9-7을 먼저 예약하고, Robot2는 겹치는 시간을 피해 Node 9에서 기다린 뒤 통과한다.">
         <g font-size="11">
           <text x="0" y="14" font-weight="700" fill="#15181d" font-size="11.5">시간 예약표 예시 · 9→7 합류 구간</text>
           <line x1="74" y1="182" x2="372" y2="182" stroke="#15181d" stroke-width="1"/>
@@ -277,7 +277,7 @@
           </g>
           <g stroke="#eef0f2"><line x1="134" y1="30" x2="134" y2="182"/><line x1="194" y1="30" x2="194" y2="182"/><line x1="254" y1="30" x2="254" y2="182"/><line x1="314" y1="30" x2="314" y2="182"/></g>
           <g font-weight="700" fill="#454d59" font-size="10.5">
-            <text x="0" y="56">Node 9</text><text x="0" y="98">통로 9–7</text><text x="0" y="140">Node 7</text>
+            <text x="0" y="56">Node 9</text><text x="0" y="98">Edge 9-7</text><text x="0" y="140">Node 7</text>
           </g>
           <!-- Robot1 -->
           <rect x="74" y="42" width="44" height="20" rx="3" fill="#25446f"/>
@@ -344,9 +344,9 @@
   </div>
 
   <div class="g3 mt2" style="grid-template-columns:1fr 1fr 1fr">
-    <figure><div class="shot" style="height:50mm"><img src="assets/rc_car.jpg" alt="RC카 차체: 아크릴 섀시 위 TFT LCD에 캐릭터 표시" style="object-position:center 55%"></div><figcaption class="cap">차체 · 상단 LCD에 기울기 캐릭터</figcaption></figure>
-    <figure><div class="shot" style="height:50mm"><img src="assets/rc_controller.jpg" alt="조이스틱 컨트롤러 보드"></div><figcaption class="cap">조종기 · 조이스틱 + 블루투스</figcaption></figure>
-    <figure><div class="shot" style="height:50mm"><img src="assets/rc_drive.jpg" alt="주행 시연 장면" style="object-position:center 60%"></div><figcaption class="cap">주행 시연</figcaption></figure>
+    <figure><div class="shot" style="height:72mm"><img src="assets/rc_car.jpg" alt="RC카 차체: 아크릴 섀시 위 TFT LCD에 캐릭터 표시" style="object-position:center 55%"></div><figcaption class="cap">차체 · 상단 LCD에 기울기 캐릭터</figcaption></figure>
+    <figure><div class="shot" style="height:72mm"><img src="assets/rc_controller.jpg" alt="조이스틱 컨트롤러 보드"></div><figcaption class="cap">조종기 · 조이스틱 + 블루투스</figcaption></figure>
+    <figure><div class="shot" style="height:72mm"><img src="assets/rc_drive.jpg" alt="주행 시연 장면" style="object-position:center 60%"></div><figcaption class="cap">주행 시연</figcaption></figure>
   </div>
 
   <div class="eyebrow mt2">데이터 흐름 · 담당 영역</div>
@@ -396,8 +396,6 @@
     </div>
   </div>
 
-  <div class="grow"></div>
-  <div class="status"><b>팀 결과</b><span>조이스틱 입력 → 패킷 송수신 → 좌우 모터 PI 제어를 10ms 주기로 운용하고, 초음파 10cm 장애물 정지와 500ms fail-safe를 함께 동작시켰습니다. 계획했던 카메라(OV7670) 영상 저장은 기간 안에 완성하지 못해 제외했습니다.</span></div>
   <div class="foot"><span>김소정 · 로봇 SW 포트폴리오</span><span class="no">06 / 11</span></div>
 </section>
 

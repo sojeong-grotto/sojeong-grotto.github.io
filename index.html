@@ -42,7 +42,7 @@
       </div>
       <div class="photo"><img src="assets/photo.jpg" alt="김소정 증명사진" width="225" height="291"></div>
     </div>
-    <p class="summary">9년간 C++로 메신저·업무 시스템을 만들며 <b>시스템 사이의 데이터 흐름을 설계하고 장애 원인을 끝까지 추적</b>해 왔습니다. 그 결과가 화면에서 끝나지 않고 실제 장비의 움직임으로 이어지길 원해 장비 제어·로봇 SW로 전환했고, 지금은 ROS 2 기반 다중 로봇 관제 시스템에서 <b>로봇들이 서로 막히지 않도록 경로와 통행 순서를 조율하는 기능</b>을 맡고 있습니다.</p>
+    <p class="summary">9년간 C++ 기반 메신저·업무 시스템을 개발하며 <b>시스템 간 데이터 흐름을 설계하고 장애 원인을 분석</b>해 왔습니다. 이 경험을 장비 제어·로봇 SW로 확장하고 있으며, 현재 ROS 2 기반 다중 로봇 관제 시스템에서 <b>경로 탐색·자원 예약·통행 제어 기능</b>을 개발하고 있습니다.</p>
     <div class="cta">
       <a class="btn solid" href="#p1">대표 프로젝트 보기</a>
       <a class="btn ghost" href="mailto:ksj9164@gmail.com">ksj9164@gmail.com</a>
@@ -157,7 +157,7 @@
         <p class="intro">주문이 들어오면 AMR을 배차하고, 피킹 스테이션에서 로봇팔이 물품을 싣고, 패킹 스테이션까지 운반하는 흐름을 관제합니다. 저는 FMS 파트에서 <b>여러 AMR이 서로 막히지 않도록 경로와 통행 시간을 조율하는 부분</b>을 맡았습니다.</p>
         <figure>
           <a class="shot" href="assets/fms_ui.jpg" target="_blank" rel="noopener"><img src="assets/fms_ui.jpg" alt="FMS 웹 관제 화면: 노드 그래프 지도 위 로봇 3대와 주문 입력, 시나리오 실행 UI" loading="lazy"></a>
-          <figcaption class="cap">FMS 웹 관제 화면. 지도 위 로봇 3대의 위치와 상태가 실시간으로 갱신되고, 상단 콤보박스에서 교통 시나리오를 골라 실행합니다.</figcaption>
+          <figcaption class="cap">FMS 웹 관제 화면. 지도 위 로봇 3대의 위치와 상태가 실시간으로 갱신되고, 상단 콤보박스에서 교통 시나리오를 골라 테스트합니다.</figcaption>
         </figure>
         <div>
           <div class="blocktitle">시스템 구성 · 담당 영역</div>
@@ -214,7 +214,7 @@
         </div>
         <figure>
             <div class="blocktitle">"어느 길로"에 "언제"를 더하다</div>
-            <div class="diagram narrow"><svg data-name="p1-timeline" viewBox="0 0 380 210" width="100%" role="img" aria-label="시간 예약표 예시. Robot1이 통로 9-7을 먼저 예약하고, Robot2는 겹치는 시간을 피해 Node 9에서 기다린 뒤 통과한다.">
+            <div class="diagram narrow"><svg data-name="p1-timeline" viewBox="0 0 380 210" width="100%" role="img" aria-label="시간 예약표 예시. Robot1이 Edge 9-7을 먼저 예약하고, Robot2는 겹치는 시간을 피해 Node 9에서 기다린 뒤 통과한다.">
         <g font-size="11">
           <text x="0" y="14" font-weight="700" fill="#15181d" font-size="11.5">시간 예약표 예시 · 9→7 합류 구간</text>
           <line x1="74" y1="182" x2="372" y2="182" stroke="#15181d" stroke-width="1"/>
@@ -223,7 +223,7 @@
           </g>
           <g stroke="#eef0f2"><line x1="134" y1="30" x2="134" y2="182"/><line x1="194" y1="30" x2="194" y2="182"/><line x1="254" y1="30" x2="254" y2="182"/><line x1="314" y1="30" x2="314" y2="182"/></g>
           <g font-weight="700" fill="#454d59" font-size="10.5">
-            <text x="0" y="56">Node 9</text><text x="0" y="98">통로 9–7</text><text x="0" y="140">Node 7</text>
+            <text x="0" y="56">Node 9</text><text x="0" y="98">Edge 9-7</text><text x="0" y="140">Node 7</text>
           </g>
           <!-- Robot1 -->
           <rect x="74" y="42" width="44" height="20" rx="3" fill="#25446f"/>
@@ -357,7 +357,6 @@
               <dt class="r">배운 점</dt><dd>레지스터 읽기는 배선 상태에 좌우되므로 화면 출력 검증을 함께 둡니다.</dd></dl></div>
           </div>
         </div>
-        <div class="status"><b>팀 결과</b><span>조이스틱 입력 → 패킷 송수신 → 좌우 모터 PI 제어를 10ms 주기로 안정적으로 운용했고, 초음파 10cm 장애물 정지와 500ms fail-safe를 함께 동작시켰습니다. 계획했던 카메라(OV7670) 영상 저장은 기간 안에 완성하지 못해 최종 시스템에서 제외했습니다.</span></div>
       </div>
     </article>
 
