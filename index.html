@@ -283,7 +283,7 @@
           <div><span class="tl-l">한 줄 요약</span><p>조이스틱으로 조종하는 무선 RC카에서, <b>가속도 센서 값을 LCD 표시 좌표와 상태로 변환</b>해, 차체 기울기에 따라 화면이 반응하도록 구현했습니다.</p></div>
           <div><span class="tl-l">결과</span><p>기울기를 왼쪽·가운데·오른쪽 <b>3단계로 안정적으로 표시</b>하고, 변경 영역만 갱신해 화면 깜빡임을 없앴습니다. LCD 응답 오류는 <b>원인(MISO 배선 미연결)을 찾아 해결</b>했습니다.</p></div>
         </div>
-        <p class="intro">STM32F411RE 보드 두 대를 블루투스 UART로 연결해 조이스틱으로 조종하는 RC카입니다. 저는 <b>가속도 센서 값을 LCD 표시 좌표·상태로 변환하는 센서 데이터 처리와 디스플레이 제어</b>를 맡았습니다.</p>
+        <p class="intro">STM32F411RE 보드 두 대를 블루투스 UART로 연결해 조이스틱으로 조종하는 RC카입니다. 저는 차체의 기울기를 읽어 LCD 캐릭터의 위치와 표정을 바꾸는 <b>센서-화면 연동</b>을 맡았습니다.</p>
         <div class="g3 photos">
           <figure><a class="shot" href="assets/rc_car.jpg" target="_blank" rel="noopener" style="aspect-ratio:3/4"><img src="assets/rc_car.jpg" alt="RC카 차체: 아크릴 섀시 위 TFT LCD에 캐릭터 표시" loading="lazy"></a><figcaption class="cap">차체 · 상단 LCD에 기울기 캐릭터</figcaption></figure>
           <figure><a class="shot" href="assets/rc_controller.jpg" target="_blank" rel="noopener" style="aspect-ratio:3/4"><img src="assets/rc_controller.jpg" alt="조이스틱 컨트롤러 보드" loading="lazy"></a><figcaption class="cap">조종기 · 조이스틱 + 블루투스</figcaption></figure>
