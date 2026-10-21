@@ -517,7 +517,7 @@
         </div>
         <div>
           <div class="blocktitle">Microsoft Teams 양방향 메시지 연동</div>
-          <div class="diagram scroll-x"><svg data-name="p4-teams" viewBox="0 0 720 106" width="100%" class="mt1" role="img" aria-label="Graph REST API를 주기적으로 조회하고, 로컬 DB의 마지막 업데이트 시간과 비교해 신규 메시지만 메신저에 표시한다. 송신은 반대 방향으로 API를 호출한다.">
+          <div class="diagram scroll-x"><svg data-name="p4-teams" viewBox="0 0 720 106" width="100%" class="mt2" role="img" aria-label="Graph REST API를 주기적으로 조회하고, 로컬 DB의 마지막 업데이트 시간과 비교해 신규 메시지만 메신저에 표시한다. 송신은 반대 방향으로 API를 호출한다.">
       <defs><marker id="ar5" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7d8592"/></marker></defs>
       <g font-size="11" text-anchor="middle">
         <g fill="#f6f6f4" stroke="#e2e4e8"><rect x="0" y="10" width="150" height="50" rx="6"/><rect x="190" y="10" width="160" height="50" rx="6"/><rect x="560" y="10" width="160" height="50" rx="6"/></g>
@@ -532,6 +532,15 @@
       </g>
     </svg></div>
           <p class="small" style="margin-top:12px">Microsoft Graph REST API를 분석해 메시지 <b>수신·전송 구조를 설계</b>했습니다. API를 일정 주기로 조회하고 <b>마지막 업데이트 시각을 로컬 DB에서 관리해 신규 메시지를 구분</b>하는 방식으로, 메시지 <b>중복·누락을 줄이는 동기화 로직</b>을 구현했습니다.</p>
+        </div>
+        <div>
+          <div class="blocktitle">사용자 PC에서만 발생한 비정상 종료 분석·수정</div>
+          <div class="case"><dl class="psr">
+            <dt class="p">증상</dt><dd>특정 사용자 PC에서 메신저가 비정상 종료됐지만, 개발 환경에서는 재현되지 않았습니다.</dd>
+            <dt>분석</dt><dd>발생 당시의 사용 조건을 확인하고, <b>WinDbg로 크래시 덤프의 호출 스택과 실행 흐름을 추적</b>했습니다.</dd>
+            <dt>원인</dt><dd>모바일 앱으로 대화하던 상대가 PC 메신저로 넘어와 대화를 이어갈 때, <b>특정 속성값이 비어 있는 패킷</b>을 처리하는 과정에서 메모리 참조 오류가 발생했습니다.</dd>
+            <dt>조치</dt><dd>해당 속성값이 비어 있는 경우를 처리하도록 코드를 수정했습니다.</dd>
+            <dt class="r">검증</dt><dd>같은 조건(모바일 → PC 전환)으로 재현해 <b>종료되지 않음을 확인</b>했습니다.</dd></dl></div>
         </div>
         <div class="box tint"><span class="label">이전 회사 · 소프트보울 (2014–2016) · TrustForm</span>
           <p class="small" style="margin-top:8px">MFC로 만든 XML/XForms 웹 UI 도구를 유지보수하며 <b>신한카드·국립중앙의료원 등 20여 개 고객사</b>를 전담했습니다. 고객사마다 다른 요구에 맞춰 WinInet HTTPS 통신, XML→JSON 변환 API, HTTP 오류 시 에러 페이지 전환을 구현했고, 키보드 보안 모듈(nProtect NOS)을 화면 생성·포커스 진입·이탈 시점에 맞춰 연동했습니다.</p></div>
@@ -548,7 +557,7 @@
     <p class="lead">담당 장비의 동작 순서와 기존 구조부터 익히고, 맡은 기능은 예외 상황까지 검증해 끝까지 책임지겠습니다.</p>
     <div class="clinks">
       <a href="mailto:ksj9164@gmail.com"><span class="label">Email</span><span>ksj9164@gmail.com</span><span class="arrow">→</span></a>
-      <a href="김소정_로봇SW_포트폴리오.pdf" download><span class="label">PDF</span><span>포트폴리오 PDF (A4 10장)</span><span class="arrow">↓</span></a>
+      <a href="김소정_로봇SW_포트폴리오.pdf" download><span class="label">PDF</span><span>포트폴리오 PDF (A4 11장)</span><span class="arrow">↓</span></a>
       <a href="print.html"><span class="label">Print</span><span>인쇄용 페이지 보기</span><span class="arrow">→</span></a>
     </div>
     <div class="foot"><span>© 2026 김소정</span><span>Pretendard · 직접 제작한 정적 페이지</span></div>
