@@ -167,14 +167,14 @@
           <div class="blocktitle">내가 맡은 일</div>
           <div class="g3 roles">
             <div class="box"><h4><span>01</span>경로 탐색</h4><p>A*로 시작해 예약 상태를 반영하는 <b>Space-Time A*</b>로 확장했습니다. 대기와 우회 경로를 예상 도착 시각 기준으로 비교해 선택합니다.</p></div>
-            <div class="box"><h4><span>02</span>시간창 기반 예약 테이블</h4><p>노드와 통로를 자원으로 보고, 로봇마다 <b>언제부터 언제까지</b> 쓰는지 기록합니다. 시간 구간이 겹치면 확정하지 않습니다.</p></div>
+            <div class="box"><h4><span>02</span>시간창 기반 예약 테이블</h4><p>노드와 통로(Edge)를 자원으로 보고, 로봇마다 <b>언제부터 언제까지</b> 쓰는지 기록합니다. 시간 구간이 겹치면 확정하지 않습니다.</p></div>
             <div class="box"><h4><span>03</span>교통 관리 분리</h4><p>시뮬레이터 안에 섞여 있던 예약·교착·허가 정책을 <b>별도의 클래스</b>로 옮겨 실물 로봇과 연결할 수 있게 했습니다.</p></div>
           </div>
         </div>
         <figure>
             <div class="blocktitle">시간 기반 경로 예약 · 예약 테이블 예시</div>
             <div class="diagram narrow"><!--SVG:p1-timeline--></div>
-            <figcaption class="cap">Robot1이 통로를 쓰는 시간과 겹치지 않도록 Robot2는 Node 9에서 기다린 뒤 진입합니다. 방향이 달라도 같은 물리 통로는 하나의 자원으로 비교하고, 목적지 정차도 예약해 다른 로봇의 진입을 막습니다.</figcaption>
+            <figcaption class="cap">Robot1이 통로 9-7을 쓰는 시간과 겹치지 않도록 Robot2는 노드 9에서 기다린 뒤 진입합니다. 방향이 달라도 같은 물리 통로는 하나의 자원으로 비교하고, 목적지 정차도 예약해 다른 로봇의 진입을 막습니다.</figcaption>
         </figure>
           <div>
             <div class="blocktitle">구간 진입 허가(Segment Permission)</div>
