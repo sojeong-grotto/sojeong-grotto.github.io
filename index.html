@@ -89,14 +89,14 @@
       <div class="cxb">
         <div class="cxh"><span class="cxn">01</span><h3>다중 로봇 경로·교통 제어</h3></div>
         <div class="cxk"><span>Python</span><span>ROS 2</span><span>Nav2</span><span>Gazebo</span><span>Linux (Ubuntu)</span></div>
-        <ul class="dots"><li>Space-Time A* 경로 탐색과 노드·통로 단위 시간창 기반 자원 예약 테이블로 로봇 간 충돌을 사전에 차단</li><li>순환 대기를 탐지해 측면 노드로 양보시킨 뒤 원래 목적지로 복귀</li><li>예약·교착·구간 진입 허가 정책을 실물 연동이 가능한 독립 서비스로 분리</li></ul>
+        <ul class="dots"><li>Space-Time A* 경로 탐색과 노드·통로 단위 시간창 기반 자원 예약 테이블로 로봇 간 충돌을 사전에 차단</li><li>순환 대기를 탐지해 측면 노드로 양보시킨 뒤 원래 목적지로 복귀</li><li>예약·교착·구간 진입 허가 정책을 실물 연동이 가능한 별도 클래스로 분리</li></ul>
         <div class="cxe">근거 · <a href="#p1">P1 다중 로봇 FMS</a></div>
       </div>
       <div class="cxb">
         <div class="cxh"><span class="cxn">02</span><h3>시스템 연동·데이터 흐름 설계</h3></div>
         <div class="cxk"><span>C++</span><span>SQL</span><span>SQLite</span><span>REST API (Microsoft Graph)</span></div>
         <ul class="dots"><li>분리된 메신저를 통합 구조·DB로 재설계하고 로컬 DB 마이그레이션 구현</li><li>Graph REST API로 사내 메신저와 Teams 간 메시지 조회·전송·동기화</li><li>계열사별 조직도를 기준으로 사용자를 관리하는 DB 테이블 설계</li></ul>
-        <div class="cxe">근거 · <a href="#p4">P4 통합 메신저</a></div>
+        <div class="cxe">근거 · <a href="#p4">P4 통합 메신저</a> · <a href="#p4">소프트보울 TrustForm</a></div>
       </div>
       <div class="cxb">
         <div class="cxh"><span class="cxn">03</span><h3>장비 제어·임베디드 구현</h3></div>
@@ -134,7 +134,7 @@
       <a class="pcard" href="#p4"><div class="thumb" style="background:var(--night);display:flex;flex-direction:column;justify-content:center;padding:20px;gap:8px">
           <span style="color:#ff9a6b;font-weight:800;font-size:13px;letter-spacing:.1em">C++ · MFC · SQLITE</span>
           <span style="color:#fff;font-weight:800;font-size:22px;line-height:1.25">Messenger A · B · C<br>→ Qpost</span></div>
-        <div class="body"><div class="pg"><span>P4 · 2017 – 2024</span><span class="tag work">실무</span></div><h3>그룹사 통합 메신저</h3><p>4개사·약 1,500명 통합, DB 마이그레이션, Teams 연동, 크래시 분석</p><span class="go">자세히 →</span></div></a>
+        <div class="body"><div class="pg"><span>P4 · 2017 – 2024</span><span class="tag work">실무</span></div><h3>그룹사 통합 메신저</h3><p>4개사·약 1,500명 통합, DB 마이그레이션, Teams 연동, 장애 추적·해결</p><span class="go">자세히 →</span></div></a>
     </div>
 
     <!-- ---------- P1 ---------- -->
@@ -152,7 +152,7 @@
       <div class="content">
         <div class="tldr">
           <div><span class="tl-l">한 줄 요약</span><p>여러 AMR이 같은 통로를 공유해도 충돌·교착 없이 주행하도록, 로봇별 경로와 통로 사용 시간을 미리 할당하는 <b>교통 관리 기능</b>을 개발했습니다.</p></div>
-          <div><span class="tl-l">결과</span><p>병목, 마주 오는 주행, 로봇 3대가 서로 기다리는 교착 상황을 <b>대기·양보·우회로 풀도록 구현</b>해 시뮬레이션에서 검증했고, 교통 관리 로직을 실물 로봇과 연결할 수 있는 <b>별도 클래스로 분리</b>했습니다. 실물 로봇 3대와의 통합 검증은 진행 중입니다.</p></div>
+          <div><span class="tl-l">결과</span><p>병목, 마주 오는 주행, 로봇 3대가 서로 기다리는 교착 상황을 <b>대기·양보·우회로 풀도록 구현</b>해 FMS 시뮬레이터에서 검증했고, 교통 관리 로직을 실물 로봇과 연결할 수 있는 <b>별도 클래스로 분리</b>했습니다. 실물 로봇 3대와의 통합 검증은 진행 중입니다.</p></div>
         </div>
         <p class="intro">주문 → 배차 → 피킹 → 패킹으로 이어지는 물류 흐름 중, FMS 파트에서 <b>다중 AMR의 경로 탐색·통로 사용 시간 예약·교착 해소</b>를 맡았습니다.</p>
         <figure>
@@ -262,7 +262,7 @@
           </div>
           <p class="cap">시뮬레이션은 시작 위치를 복원한 뒤 30초 이내, 실물은 배치 위치를 0.15m 허용 오차로 확인한 뒤 180초 이내 완료 시 통과로 판정합니다. 실물 시작 위치가 다르면 명령 전송 전에 거부 사유를 표시합니다.</p>
         </div>
-        <div class="status"><b>진행 현황</b><span>실물 TurtleBot3 3대와 통합 검증 중입니다. 점유·예약 해제와 주행 흐름을 점검하고 있으며, 같은 조건에서 LLM 경로 판단과 비교하는 실험을 팀과 함께 설계하고 있습니다.</span></div>
+        <div class="status"><b>진행 현황</b><span>실물 TurtleBot3 3대와 통합 검증 중입니다. 점유·예약 해제와 주행 흐름을 점검하고 있습니다.</span></div>
       </div>
     </article>
 
