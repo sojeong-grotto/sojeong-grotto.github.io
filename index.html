@@ -517,7 +517,7 @@
         </div>
         <div>
           <div class="blocktitle">Microsoft Teams 채팅 연동</div>
-          <div class="diagram scroll-x"><svg data-name="p4-teams" viewBox="0 0 720 112" width="100%" class="mt1" role="img" aria-label="Graph REST API를 주기적으로 조회하고, 로컬 DB의 마지막 업데이트 시간과 비교해 신규 메시지만 메신저에 표시한다. 송신은 반대 방향으로 API를 호출한다.">
+          <div class="diagram scroll-x"><svg data-name="p4-teams" viewBox="0 0 720 106" width="100%" class="mt1" role="img" aria-label="Graph REST API를 주기적으로 조회하고, 로컬 DB의 마지막 업데이트 시간과 비교해 신규 메시지만 메신저에 표시한다. 송신은 반대 방향으로 API를 호출한다.">
       <defs><marker id="ar5" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7d8592"/></marker></defs>
       <g font-size="11" text-anchor="middle">
         <g fill="#f6f6f4" stroke="#e2e4e8"><rect x="0" y="10" width="150" height="50" rx="6"/><rect x="190" y="10" width="160" height="50" rx="6"/><rect x="560" y="10" width="160" height="50" rx="6"/></g>
@@ -527,11 +527,11 @@
         <text x="460" y="32" font-weight="700" fill="#b8410f">신규 메시지 구분</text><text x="460" y="49" font-size="9.8" fill="#b8410f">마지막 갱신 시각 · 로컬 DB</text>
         <text x="640" y="32" font-weight="700" fill="#15181d">Teams 전용 채팅 UI</text><text x="640" y="49" font-size="9.8" fill="#454d59">표시 · 피드백 반영</text>
         <g stroke="#7d8592" stroke-width="1.3" marker-end="url(#ar5)"><line x1="151" y1="35" x2="187" y2="35"/><line x1="351" y1="35" x2="387" y2="35"/><line x1="531" y1="35" x2="557" y2="35"/></g>
-        <path d="M640,62 C640,90 75,90 75,64" fill="none" stroke="#25446f" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#ar5)"/>
-        <text x="360" y="106" font-size="9.8" fill="#25446f" font-weight="600">송신 · 메신저 입력을 Graph API로 Teams 사용자에게 전달</text>
+        <path d="M640,61 V76 Q640,82 634,82 H81 Q75,82 75,76 V64" fill="none" stroke="#25446f" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#ar5)"/>
+        <text x="360" y="100" font-size="9.8" fill="#25446f" font-weight="600">송신 · 메신저 입력을 Graph API로 Teams 사용자에게 전달</text>
       </g>
     </svg></div>
-          <p class="small" style="margin-top:12px">API를 일정 주기로 조회하되 <b>마지막 업데이트 시각을 로컬 DB에 저장해 비교</b>하는 방식으로 새 메시지만 골라, 같은 메시지가 두 번 뜨거나 빠지는 경우를 줄였습니다.</p>
+          <p class="small" style="margin-top:12px">Microsoft Graph REST API를 분석해 메시지 <b>수신·전송 구조를 설계</b>했습니다. API를 일정 주기로 조회하고 <b>마지막 업데이트 시각을 로컬 DB에서 관리해 신규 메시지를 구분</b>하는 방식으로, 메시지 <b>중복·누락을 줄이는 동기화 로직</b>을 구현했습니다.</p>
         </div>
         <div class="box tint"><span class="label">이전 회사 · 소프트보울 (2014–2016) · TrustForm</span>
           <p class="small" style="margin-top:8px">MFC로 만든 XML/XForms 웹 UI 도구를 유지보수하며 <b>신한카드·국립중앙의료원 등 20여 개 고객사</b>를 전담했습니다. 고객사마다 다른 요구에 맞춰 WinInet HTTPS 통신, XML→JSON 변환 API, HTTP 오류 시 에러 페이지 전환을 구현했고, 키보드 보안 모듈(nProtect NOS)을 화면 생성·포커스 진입·이탈 시점에 맞춰 연동했습니다.</p></div>
