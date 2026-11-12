@@ -25,7 +25,7 @@
       </div>
       <div class="photo"><img src="assets/photo.jpg" alt="김소정 증명사진"></div>
     </div>
-    <p class="summary">9년간 C++ 기반 메신저·업무 시스템을 개발하며 <b>시스템 간 데이터 흐름을 설계하고 장애 원인을 분석</b>해 왔습니다. 이 경험을 장비 제어·로봇 SW로 확장하고 있으며, 현재 ROS 2 기반 다중 로봇 관제 시스템에서 <b>경로 탐색·자원 예약·통행 제어 기능</b>을 개발하고 있습니다.</p>
+    <p class="summary">9년간 C++ 기반 메신저·업무 시스템을 개발하며 <b>시스템 간 데이터 흐름을 설계하고 장애 원인을 분석</b>해 왔습니다. 이 경험을 장비 제어·로봇 SW로 넓혀, ROS 2 기반 다중 로봇 물류 시스템에서 <b>FMS 교통 제어와 팔레트 운반 로봇의 인식·정렬·운반 기능</b>을 개발했습니다.</p>
   </div>
 
   <div class="body">
@@ -46,12 +46,17 @@
         <div class="t">고객사별 통신·연동 요구 대응</div>
         <div class="d">HTTPS 통신, XML→JSON 변환, 보안 SDK 연동을 고객사마다 맞춰 구현</div>
       </div>
+      <div class="kpi robot">
+        <div class="n">0.8<span>°</span></div>
+        <div class="t">팔레트 방향 추정 흔들림 3.6°→0.8°</div>
+        <div class="d">YOLO-Pose·PnP 자세 추정에 앞면 수직 제약을 더해 개선 (녹화 영상 240프레임)</div>
+      </div>
     </div>
 
 
     <div class="focus mt3">
       <div><span class="label">바로 기여</span><p><b>C++ 기반 운영 프로그램 개발</b>, <b>외부 시스템 연동</b>, <b>DB 구조 설계와 데이터 이전</b>, <b>사용자 환경 장애 분석</b>에 바로 기여할 수 있습니다.</p></div>
-      <div><span class="label">넓혀 가는 중</span><p><b>ROS 2·Nav2 기반 다중 로봇 경로·예약 제어</b>와, <b>센서·설비 상태를 화면과 동기화</b>하는 영역으로 역량을 넓혀 가고 있습니다.</p></div>
+      <div><span class="label">넓혀 가는 중</span><p><b>ROS 2 기반 로봇 인식·자율주행과 관제 연동</b>, <b>센서·설비 상태를 화면과 동기화</b>하는 영역으로 역량을 넓혀 가고 있습니다.</p></div>
     </div>
 
     <div class="eyebrow mt4">경력 · 교육</div>
@@ -59,7 +64,7 @@
       <div class="item now">
         <div class="when">2026.04 – 2026.11</div>
         <div class="what"><h4>대한상공회의소 서울기술교육센터 <span class="tag edu">교육</span></h4>
-          <p>AI융합 로봇 SW 개발자 과정 3기 · C/C++, Python, Linux · PLC(MELSEC-Q, GOT HMI, Servo) · STM32 HAL · ROS 2 다중 로봇 물류 프로젝트 진행 중</p></div>
+          <p>AI융합 로봇 SW 개발자 과정 3기 · C/C++, Python, Linux · PLC(MELSEC-Q, GOT HMI, Servo) · STM32 HAL · ROS 2 다중 로봇 물류 프로젝트(FMS 교통 제어 · 팔레트 운반 AMR)</p></div>
       </div>
       <div class="item">
         <div class="when">2017.08 – 2024.08<br><span style="font-weight:500;color:var(--mute)">7년 1개월</span></div>
@@ -96,12 +101,12 @@
   <div class="cx">
     <div class="cxb">
       <div class="cxl2">
-        <div class="cxh"><span class="cxn">01</span><h3>다중 로봇 경로·교통 제어</h3></div>
+        <div class="cxh"><span class="cxn">01</span><h3>로봇 관제·인식·자율주행</h3></div>
         <div class="cxe">근거 · <b>P1 다중 로봇 FMS</b></div>
       </div>
       <div class="cxr">
-        <div class="cxk"><span>Python</span><span>ROS 2</span><span>Nav2</span><span>Gazebo</span><span>Linux (Ubuntu)</span></div>
-        <ul class="dots"><li>Space-Time A* 경로 탐색과 시간창 기반 자원 예약 테이블로 노드·통로의 사용 시간 중복을 검사하고 진입 순서를 제어</li><li>순환 대기를 탐지해 측면 노드로 양보시킨 뒤 원래 목적지로 복귀</li><li>예약·교착·구간 진입 허가 정책을 실물 연동이 가능한 별도 클래스로 분리</li></ul>
+        <div class="cxk"><span>Python</span><span>ROS 2</span><span>Nav2</span><span>Gazebo</span><span>YOLO-Pose</span><span>PnP</span><span>Linux (Ubuntu)</span></div>
+        <ul class="dots"><li>Space-Time A* 경로 탐색과 시간창 기반 예약 테이블로 노드·통로의 사용 시간 중복을 검사하고, 순환 대기는 옆 노드 양보로 해소</li><li>YOLO-Pose 키포인트와 PnP 자세 추정으로 팔레트 위치·방향을 구해 정렬 후 포크 삽입 (방향 흔들림 3.6°→0.8°)</li><li>Nav2 이동 전 스캔 매칭 위치 보정과, FMS가 호출하는 ROS 2 액션 서버로 팔레트 운반 시퀀스 구현</li></ul>
       </div>
     </div>
     <div class="cxb">
@@ -154,9 +159,9 @@
     <tbody>
       <tr>
         <td class="th"><div class="tthumb"><img src="assets/fms_ui.jpg" alt="" style="object-position:left top"></div></td>
-        <td><div class="pg">P1 · p.04–05</div><div class="pt">다중 로봇 물류 자동화 FMS</div><div class="small">AMR 3대와 로봇팔 4대를 주문 단위로 운영하는 관제 시스템</div></td>
-        <td>2026.09 – 진행 중<br>7인 <span class="tag live">진행 중</span></td>
-        <td>경로 탐색, 노드·통로 시간 예약, 교착 해소, 구간 진입 허가 로직 분리<br><b>병목·교착 상황을 대기·양보로 해소</b></td>
+        <td><div class="pg">P1 · p.04–05</div><div class="pt">다중 로봇 물류 자동화 FMS</div><div class="small">AMR·로봇팔을 주문 단위로 운영하는 관제 시스템과 팔레트 운반 로봇</div></td>
+        <td>2026.09 – 11<br>7인</td>
+        <td>1차 다중 AMR 경로 계획·교통 제어, 2차 팔레트 운반 Waffle 단독 개발<br><b>교통 제어 실물 검증, 방향 추정 흔들림 3.6°→0.8°</b></td>
       </tr>
       <tr>
         <td class="th"><div class="tthumb"><img src="assets/rc_car.jpg" alt="" style="object-position:center 55%"></div></td>
@@ -185,28 +190,22 @@
 
 <!-- =============================== 05 P1-1 =============================== -->
 <section class="page" id="p1">
-  <div class="run"><span>Kim Sojeong · Portfolio 2026</span><span class="sec">P1 · 다중 로봇 FMS · 1 / 2</span></div>
-  <div class="eyebrow"><span class="pno">P1</span>Multi-Robot Fleet Management</div>
+  <div class="run"><span>Kim Sojeong · Portfolio 2026</span><span class="sec">P1 · 다중 로봇 물류 FMS · 1 / 2</span></div>
+  <div class="eyebrow"><span class="pno">P1</span>Multi-Robot Logistics · FMS &amp; Pallet AMR</div>
   <h1 class="title">다중 로봇 물류 자동화 FMS</h1>
   <div class="tldr">
-    <div><span class="tl-l">한 줄 요약</span><p>여러 AMR이 공유하는 통로에서의 경로 충돌과 교착에 대응하도록, 로봇별 경로와 통로 사용 시간을 미리 할당하는 <b>교통 관리 기능</b>을 개발했습니다.</p></div>
-    <div><span class="tl-l">결과</span><p>병목, 마주 오는 주행, 로봇 3대가 서로 기다리는 교착 상황을 <b>대기·양보·우회로 풀도록 구현</b>해 FMS 시뮬레이터에서 검증했고, 교통 관리 로직을 실물 로봇과 연결할 수 있는 <b>별도 클래스로 분리</b>했습니다. 실물 로봇 3대와의 통합 검증은 진행 중입니다.</p></div>
+    <div><span class="tl-l">한 줄 요약</span><p>다중 로봇 물류 시스템에서 <b>FMS의 다중 AMR 경로 계획·교통 제어</b>(1차)와, 팔레트 운반 로봇의 <b>카메라 인식·정밀 정렬·운반 액션 서버</b>(2차)를 개발했습니다.</p></div>
+    <div><span class="tl-l">결과</span><p>알고리즘 기반 교통 제어를 <b>실물 로봇에서 검증</b>하고 FMS 통합 시연을 마쳤습니다. 최종 시연 주행에는 팀원이 개발한 LLM 경로 판단을 적용했고, 두 방식을 같은 조건에서 비교했습니다. 팔레트 운반 로봇은 단독 개발해 <b>방향 추정 흔들림을 3.6°에서 0.8°로</b> 줄였습니다.</p></div>
   </div>
-  <p class="lead" style="margin-top:2mm">주문 → 배차 → 피킹 → 패킹으로 이어지는 물류 흐름 중, FMS 파트에서 <b>다중 AMR의 경로 탐색·통로 사용 시간 예약·교착 해소</b>를 맡았습니다.</p>
 
   <div class="pmeta">
-    <div><span class="label">기간</span>2026.09 – 진행 중</div>
+    <div><span class="label">기간</span>2026.09 – 2026.11</div>
     <div><span class="label">인원</span>7인 (FMS · AMR · OMX)</div>
-    <div><span class="label">역할</span>FMS 경로·교통 제어</div>
-    <div><span class="label">규모</span>AMR 3대 · 로봇팔 4대</div>
+    <div><span class="label">역할</span>1차 FMS 교통 제어 · 2차 팔레트 AMR 단독</div>
+    <div><span class="label">규모</span>AMR 3대 · 로봇팔 4대 · Waffle 1대</div>
   </div>
 
-  <figure class="mt2">
-    <div class="shot" style="height:64mm"><img src="assets/fms_ui.jpg" alt="FMS 웹 관제 화면: 노드 그래프 지도 위 로봇 3대와 주문 입력, 시나리오 실행 UI" style="object-position:left top"></div>
-    <figcaption class="cap">FMS 웹 관제 화면. 노드 그래프 지도 위 로봇 3대의 위치와 상태가 실시간으로 갱신되고, 상단 콤보박스에서 교통 시나리오를 골라 테스트합니다.</figcaption>
-  </figure>
-
-  <div class="eyebrow mt3">시스템 구성 · 담당 영역</div>
+  <div class="eyebrow mt3">1차 · 다중 AMR 경로 계획 · 교통 제어</div>
   <svg data-name="p1-arch" viewBox="0 0 720 196" width="100%" role="img" aria-label="AMR은 Zenoh, 로봇팔은 MQTT로 FMS 백엔드에 연결되고, 웹 UI와는 WebSocket으로 연결된다. 담당 영역은 경로 탐색, 예약 테이블, 교통 관리 모듈이다.">
     <defs><marker id="ar" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7d8592"/></marker></defs>
     <g font-size="12">
@@ -251,21 +250,13 @@
   </svg>
 
   <div class="g3 mt2">
-    <div><h4>경로 탐색</h4><p class="small mt1">A*로 시작해 예약 상태를 반영하는 <b>Space-Time A*</b>로 확장. 대기와 우회 경로를 예상 도착 시각 기준으로 비교해 선택합니다.</p></div>
-    <div><h4>시간창 기반 예약 테이블</h4><p class="small mt1">노드와 통로(Edge)를 자원으로 보고, 로봇마다 <b>언제부터 언제까지</b> 쓰는지 기록합니다. 시간 구간이 겹치면 확정하지 않습니다.</p></div>
-    <div><h4>교통 관리 분리</h4><p class="small mt1">시뮬레이터 안에 섞여 있던 예약·교착·허가 정책을 <b>별도의 클래스</b>로 옮겨 실물 로봇과 연결할 수 있게 했습니다.</p></div>
+    <div><h4>Space-Time A* 경로 계획</h4><p class="small mt1">A* 최단 경로 탐색에 <b>시간축 예약 테이블</b>을 더해, 노드·통로를 언제부터 언제까지 쓰는지 기록하고 시간이 겹치면 확정하지 않습니다.</p></div>
+    <div><h4>교통 제어 · 교착 회피</h4><p class="small mt1">병목 구간에서는 대기·우회하고, 서로 길을 막으면 <b>옆 노드로 비켜 가게</b> 해 교착을 풉니다. 구간마다 출발 직전 진입 허가를 다시 확인합니다.</p></div>
+    <div><h4>시뮬레이션 · 시나리오 실행</h4><p class="small mt1">mock fleet 시뮬레이션 환경을 만들고, 병목·교착 <b>시나리오 8종</b>을 API·CLI·웹 UI에서 실행해 반복 검증했습니다.</p></div>
   </div>
-  <div class="foot"><span>김소정 · 로봇 SW 포트폴리오</span><span class="no">04 / 11</span></div>
-</section>
 
-<!-- =============================== 06 P1-2 =============================== -->
-<section class="page" id="p1b">
-  <div class="run"><span>Kim Sojeong · Portfolio 2026</span><span class="sec">P1 · 다중 로봇 FMS · 2 / 2</span></div>
-  <div class="eyebrow"><span class="pno">P1</span>Route Reservation &amp; Deadlock</div>
-  <h1 class="title"><em>시간 기반 경로 예약</em>으로<br>다중 로봇 충돌·교착 대응</h1>
-
-  <div class="mt2" style="display:grid;grid-template-columns:1fr;gap:5mm">
-    <figure style="max-width:150mm">
+  <div class="p1row mt3">
+    <figure>
       <svg data-name="p1-timeline" viewBox="0 0 380 210" width="100%" role="img" aria-label="예약 테이블 예시. Robot1이 통로 9-7을 먼저 예약하고, Robot2는 겹치는 시간을 피해 노드 9에서 기다린 뒤 통과한다.">
         <g font-size="11">
           <text x="0" y="14" font-weight="700" fill="#15181d" font-size="11.5">예약 테이블 예시 · 9→7 합류 구간</text>
@@ -293,34 +284,84 @@
           <text x="187" y="168" text-anchor="middle" font-size="9.5" fill="#454d59">안전 여유</text>
         </g>
       </svg>
-      <figcaption class="cap">Robot1이 통로 9-7을 쓰는 시간과 겹치지 않도록 Robot2는 노드 9에서 기다린 뒤 진입합니다. 방향이 달라도 같은 물리 통로는 하나의 자원으로 비교하고, 목적지 정차도 예약해 다른 로봇의 진입을 막습니다.</figcaption>
+      <figcaption class="cap">Robot2는 Robot1이 통로 9-7을 쓰는 시간과 겹치지 않도록 노드 9에서 기다린 뒤 진입합니다.</figcaption>
     </figure>
-    <div>
-      <div class="label">구간 진입 허가(Segment Permission)</div>
-      <p class="small mt1">예약이 있어도 실제 위치가 계획과 다를 수 있어, 구간마다 출발 직전에 다시 확인합니다. 허가 판단은 로봇 상태와 예약 테이블을 바꾸지 않습니다.</p>
-      <table class="perm mt1">
-        <tr><td>allowed</td><td>요청·구간 예약, 출발 시각, 실제 점유, 예상 도착 시각 검사를 모두 통과</td></tr>
-        <tr><td>waiting</td><td>계획된 출발 시각 전. 예약은 그대로 둠</td></tr>
-        <tr><td>replan</td><td>예약 누락, 다른 로봇 점유, 시간표 초과. <b>정지가 확인된 뒤에만</b> 예약 해제</td></tr>
+    <div class="cmp">
+      <div class="label">경로 생성 비교 · 알고리즘 vs LLM</div>
+      <p class="cap" style="margin-top:.6mm">같은 지도·조건, 경로 생성 단계만 12개 상황 × 50회 시뮬레이션 측정 (팀 비교 자료)</p>
+      <table>
+        <tr><th></th><th>A*</th><th>LLM<small>Kev-0.8B · 팀원 개발</small></th></tr>
+        <tr><td>생성 시간</td><td><b>평균 약 0.15ms</b></td><td>116–570ms<small>추론이 필요한 상황</small></td></tr>
+        <tr><td>경로 품질</td><td><b>경로가 있는 11개 상황 모두 최단</b></td><td>3개 상황 더 긴 경로, 1개 상황 생성 실패</td></tr>
+        <tr><td>경로 없음</td><td><b>'연결 없음' 즉시 판정</b></td><td>약 570ms 후 실패</td></tr>
       </table>
+      <p class="cap">전송·주행·다중 로봇 조정 시간은 측정에서 제외</p>
     </div>
   </div>
+  <div class="foot"><span>김소정 · 로봇 SW 포트폴리오</span><span class="no">04 / 11</span></div>
+</section>
 
-  <div class="eyebrow mt3">검증 · 교통 시나리오 8종 (웹 · CLI 단일 실행)</div>
-  <div class="scen">
-    <div><b>bottleneck</b>9→7 합류 구간 예약 대기</div>
-    <div><b>head_on</b>두 로봇 자리 교환과 양보</div>
-    <div><b>cycle</b>세 로봇 순환 대기 해소</div>
-    <div><b>cycle_reverse</b>역순 요청의 순환 대기</div>
-    <div><b>central_head_on</b>중앙 통로 마주침·우회</div>
-    <div><b>junction</b>교차점 세 방향 순차 통과</div>
-    <div><b>swap_crossing</b>자리 교환 중 제3 로봇 통과</div>
-    <div><b>central_cycle</b>중앙 순환, 양보 후 복귀</div>
+<!-- =============================== 06 P1-2 =============================== -->
+<section class="page" id="p1b">
+  <div class="run"><span>Kim Sojeong · Portfolio 2026</span><span class="sec">P1 · 다중 로봇 물류 FMS · 2 / 2</span></div>
+  <div class="eyebrow"><span class="pno">P1</span>2차 · Pallet Transport AMR</div>
+  <h1 class="title">카메라로 팔레트를 인식해<br><em>정렬·삽입·운반</em>까지 자동화</h1>
+  <p class="lead" style="margin-top:2mm">포크와 카메라를 단 TurtleBot3 Waffle의 <b>카메라 구동부터 FMS 연동 액션 서버까지 단독으로 개발</b>했습니다. 인식 모델의 데이터셋 학습만 팀원이 도왔습니다.</p>
+
+  <div class="g2 mt2 wphotos">
+    <figure><div class="shot"><img src="assets/waffle_cam.jpg" alt="Waffle 카메라 화면: YOLO-Pose가 팔레트를 검출하고 앞면 키포인트를 표시"></div><figcaption class="cap">Waffle 카메라 화면. YOLO-Pose 팔레트 검출과 앞면 키포인트</figcaption></figure>
+    <figure><div class="shot"><img src="assets/waffle_carry.jpg" alt="팔레트를 포크에 싣고 지도 위를 이동하는 Waffle"></div><figcaption class="cap">팔레트를 싣고 운반하는 Waffle (재고 보충 시연)</figcaption></figure>
   </div>
-  <p class="cap">시뮬레이션은 시작 위치를 복원한 뒤 30초 이내, 실물은 배치 위치를 0.15m 허용 오차로 확인한 뒤 180초 이내 완료 시 통과로 판정합니다. 실물 시작 위치가 다르면 명령 전송 전에 거부 사유를 표시합니다.</p>
+
+  <div class="eyebrow mt3">팔레트 자세 추정 · 정밀 정렬 흐름</div>
+  <svg data-name="p1-waffle" viewBox="0 0 720 150" width="100%" role="img" aria-label="카메라 영상에서 YOLO-Pose로 팔레트 키포인트 8개를 찾고, PnP로 자세를 추정한 뒤 앞면 수직 제약으로 다시 추정한다. 정렬될 때까지 정지 관측과 정렬 이동을 반복하고 포크를 삽입한다.">
+    <defs><marker id="arw" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#7d8592"/></marker></defs>
+    <g font-size="12" text-anchor="middle">
+      <rect x="2" y="26" width="104" height="70" rx="8" fill="#f6f6f4" stroke="#e2e4e8"/>
+      <text x="54" y="55" font-weight="700" fill="#15181d">카메라 영상</text>
+      <text x="54" y="73" font-size="10" fill="#454d59">IMX219 · 약 15 FPS</text>
+      <g fill="#fff" stroke="#f0b99e">
+        <rect x="124" y="26" width="104" height="70" rx="8"/>
+        <rect x="246" y="26" width="104" height="70" rx="8"/>
+        <rect x="368" y="26" width="104" height="70" rx="8"/>
+        <rect x="490" y="26" width="104" height="70" rx="8"/>
+      </g>
+      <text x="176" y="55" font-weight="700" fill="#15181d">YOLO-Pose</text>
+      <text x="176" y="73" font-size="10" fill="#454d59">키포인트 8개</text>
+      <text x="298" y="55" font-weight="700" fill="#15181d">PnP 자세 추정</text>
+      <text x="298" y="73" font-size="10" fill="#454d59">IPPE + LM</text>
+      <text x="420" y="55" font-weight="700" fill="#15181d">수직 제약 재추정</text>
+      <text x="420" y="73" font-size="10" fill="#454d59">앞면 ⟂ 지면</text>
+      <text x="542" y="55" font-weight="700" fill="#15181d">정렬 이동</text>
+      <text x="542" y="73" font-size="10" fill="#454d59">정지 관측 후 이동</text>
+      <rect x="612" y="26" width="106" height="70" rx="8" fill="#e2541b"/>
+      <text x="665" y="55" font-weight="700" fill="#fff">포크 삽입</text>
+      <text x="665" y="73" font-size="10" fill="#fff">운반 시퀀스로</text>
+      <g stroke="#7d8592" stroke-width="1.4" marker-end="url(#arw)">
+        <line x1="107" y1="61" x2="121" y2="61"/><line x1="229" y1="61" x2="243" y2="61"/>
+        <line x1="351" y1="61" x2="365" y2="61"/><line x1="473" y1="61" x2="487" y2="61"/>
+        <line x1="595" y1="61" x2="609" y2="61"/>
+      </g>
+      <path d="M542,97 V118 Q542,124 536,124 H182 Q176,124 176,118 V100" fill="none" stroke="#e2541b" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arw)"/>
+      <text x="359" y="142" font-size="10" fill="#b8410f" font-weight="700">정렬될 때까지 정지 관측 → 정렬 이동 반복</text>
+      <text x="54" y="16" font-size="10" fill="#7d8592">Raspberry Pi → Jetson</text>
+      <text x="359" y="16" font-size="10" fill="#b8410f" font-weight="700">자세 추정 · 정밀 정렬</text>
+    </g>
+  </svg>
+
+  <div class="g2 mt2 wroles">
+    <div><h4><span>01</span>카메라 구동 · 캘리브레이션</h4><p class="small mt1">Raspberry Pi용 libcamera와 camera_ros를 빌드해 IMX219 카메라를 구동하고, 체커보드 109장으로 내부 파라미터를 보정했습니다(<b>재투영 RMS 0.42px</b>). JPEG 압축 영상을 <code>CompressedImage</code> 토픽으로 Jetson에 약 15 FPS로 보내고, <code>/camera/enable</code>(SetBool) 서비스로 ON/OFF를 관리합니다.</p></div>
+    <div><h4><span>02</span>팔레트 자세 추정 · 정밀 정렬</h4><p class="small mt1">키포인트 8개로 PnP(IPPE+LM) 자세를 추정한 뒤, <b>팔레트 앞면이 지면에 수직</b>이라는 제약으로 위치·방향을 다시 추정합니다. 정지 상태에서 관측하고 정렬 이동하기를 반복한 뒤 포크를 삽입합니다.</p></div>
+    <div><h4><span>03</span>Nav2 자율주행 · 위치 보정</h4><p class="small mt1">실제 공간 지도와 keepout 영역으로 Nav2를 구성했습니다. 이동 직전 라이다 스캔을 지도에 맞춰 위치를 찾고 AMCL 초기 자세(<code>/initialpose</code>)를 다시 설정하며, <b>일치 점수가 0.5 미만이면 이동하지 않고 중단</b>합니다.</p></div>
+    <div><h4><span>04</span>FMS 연동 운반 액션 서버</h4><p class="small mt1">FMS가 호출하는 ROS 2 액션 서버 <code>/pallet_replace</code>로 <b>회수 → 운반 → 원래 자리에 놓기 → 복귀</b>를 수행합니다. 진행 단계 피드백과 작업 취소를 지원해 1차 교통 제어와 AMR 작업을 하나로 연결했습니다.</p></div>
+  </div>
 
   <div class="grow"></div>
-  <div class="status"><b>진행 현황</b><span>실물 TurtleBot3 3대와 통합 검증 중입니다. 점유·예약 해제와 주행 흐름을 점검하고 있습니다.</span></div>
+  <div class="wnums">
+    <div><b>3.6° → 0.8°</b><span>팔레트 방향 추정 흔들림(표준편차)<br>약 480mm 거리, 녹화 영상 240프레임</span></div>
+    <div><b>0.42px</b><span>카메라 캘리브레이션 재투영 RMS<br>체커보드 109장</span></div>
+    <div><b>약 15 FPS</b><span>압축 영상 전송<br>Raspberry Pi → Jetson</span></div>
+  </div>
   <div class="foot"><span>김소정 · 로봇 SW 포트폴리오</span><span class="no">05 / 11</span></div>
 </section>
 
