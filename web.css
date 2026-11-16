@@ -305,6 +305,12 @@ figure{margin:0}
 /* P1: 1차·2차 구분, 경로 생성 비교, Waffle */
 .kpis{grid-template-columns:repeat(4,1fr)}
 @media (max-width:1000px) and (min-width:761px){.kpis{grid-template-columns:repeat(2,1fr)}.kpi:nth-child(3){padding-left:0;border-left:0}}
+/* 대표 성과: 실무 / 로봇·장비 두 묶음으로 나눠 경력 수준을 구분한다 */
+.kpi-groups{display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(40px,6vw,64px);font-size:13px;font-weight:800;letter-spacing:.08em;color:var(--accent)}
+.kpi-groups>*{grid-column:span 2}
+.kpi-groups>*+*{padding-left:24px}
+.kpi-groups + .kpis{margin-top:14px}
+@media (max-width:1000px){.kpi-groups{display:none}}
 .phase{display:flex;align-items:center;gap:12px;font-size:clamp(20px,2.4vw,24px);font-weight:800;letter-spacing:-.02em;padding-top:28px;border-top:1.5px solid var(--ink)}
 .phase span{font-size:13px;font-weight:800;color:#fff;background:var(--accent);border-radius:6px;padding:3px 9px;letter-spacing:.04em}
 .cmp table{width:100%;min-width:560px;border-collapse:collapse;font-size:15px;margin-top:14px}
@@ -324,3 +330,4 @@ figure{margin:0}
 .wnums span{display:block;font-size:13.5px;color:var(--sub);line-height:1.55;margin-top:6px}
 @media (max-width:760px){.wphotos,.wnums{grid-template-columns:minmax(0,1fr)}.wnums div{border-left:0;border-top:1px solid var(--line)}.wnums div:first-child{border-top:0}}
 @media (max-width:760px){.kpis{grid-template-columns:1fr}}
+.muted{color:var(--mute)}
